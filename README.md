@@ -14,3 +14,8 @@ This last file can be freely download from the mathworks site in the following [
 
 ## Financial Support.
 The authors appreciate the financial support received from the Consejo Nacional de Humanidades, Ciencia y Tecnología (CONAHCYT), under the program *Estancias Posdoctorales por México, 2022*, with the project entitled: *Desarrollo de modelos fenomenológicos energéticos de orden fraccional, para la optimización y simulación en reactores nucleares de potencia*, by which the present development was possible.
+
+## 1. Mathematical description of the problem
+Following the ideas of Ray and Patra (2014), a compartmental version of the The Fractional Neutron Point Kinetic Equations (FNPKE), with $K$ groups of precursors of delayed neutrons, can be written as follows:
+
+$$D_C^\alpha n\left(t\right)=\frac{\rho\left(t\right)-\beta}{\Lambda^\alpha}n\left(t\right)+\sum_{i=1}^{K}{\lambda_i^\alpha C_i(t)}, \tag{1}$$
