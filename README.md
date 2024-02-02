@@ -108,7 +108,8 @@ Therefore, the sums can be rewritten as follows:
  
 $$S_m(\set{\lambda_1^\alpha,\lambda_2^\alpha,\ldots,\lambda_n^\alpha})=S_m(\set{\lambda_i^\alpha\|1\leq i \leq\ n})\ = S_{m,n}. \tag{22}$$
 
-Even more, using this function defined over sets, it is possible to compute the sum given in Eq. that has a restriction over the indexes 
+Even more, using this function defined over sets, it is possible to compute the sum given in Eq. (19), that has a restriction over the indexes, as follows:
+$$S_{m,n}^i=S_m\left(\Omega^i\right)=S_m\left(\left\{\lambda_1^\alpha,\lambda_2^\alpha,\ldots,\lambda_{i-1}^\alpha,\lambda_{i+1}^\alpha,\ldots,\lambda_n^\alpha\right\}\right)$$
 
 
 It is possible to write the Polynomials as two variable functions that depend on $s$ as well as on $\alpha$:
