@@ -116,7 +116,7 @@ $$=S_m(\set{\lambda_k^\alpha |1\leq k\leq n,\ k\neq i}). \tag{23}$$
 
 Using this notation, it follows that:
 
-$$\lim_{\alpha\rightarrow1} \underbrace{S_m(\Omega)}}_ {\mathrm{Fractional\ case}=S\left(\lim_{\alpha\rightarrow 1}{\Omega}\right)=S\left(\lim_{\alpha\rightarrow1}{\left\{\lambda_1^\alpha,\lambda_2^\alpha,\cdots,\lambda_n^\alpha\right\}}\right)$$
+$$\lim_{\alpha\rightarrow1} \underbrace{S_m(\Omega)}}_ {\mathrm{Fractional\ case}$$
 
 It is possible to write the Polynomials as two variable functions that depend on $s$ as well as on $\alpha$:
 
