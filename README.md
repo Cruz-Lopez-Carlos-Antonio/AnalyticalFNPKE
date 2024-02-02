@@ -77,7 +77,7 @@ $$+\sum_{i=3}^{K}{\left(S_{i,K}-uS_{i-1,K}-\frac{1}{\Lambda^\alpha}\sum_{j=1}^{K
 
 $$-\frac{1}{\Lambda^\alpha}\sum_{i=1}^{K}{\lambda_i^\alpha\beta_iS_{K-1,K-1}^i} \tag{15}$$
 
-$$H(s)=\sum_{i=1}^{K}\lambda_i^\alpha C_i(0)s^{K-1}+\sum_{j=2}^{K} \sum_{i=1}^{K}{\lambda_i^\alpha C_i(0) S_{j-1,K-1}^i})s^{K-j}$$ 
+$$H(s)=\sum_{i=1}^{K}\lambda_i^\alpha C_i(0)s^{K-1}+\sum_{j=2}^{K} \sum_{i=1}^{K}{\lambda_i^\alpha C_i(0) S_{j-1,K-1}^i}s^{K-j}$$ 
 
 {}){; \tag{16}
 
