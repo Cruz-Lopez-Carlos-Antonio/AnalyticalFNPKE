@@ -71,16 +71,16 @@ where $E_{\alpha,1}(z)$ is the Mittag-Leffler function, which can be defined as 
 $$E_{\alpha,\beta}\left(z\right)=\sum_{k=0}^{\infty}\frac{z^k}{\Gamma(k\alpha+\beta)},\ \tag{14}$$ 
 
 with $\mathfrak{R}\left(\alpha\right)>0,\ \beta\in\mathbb{C}$. On the other hand, explicit expressions of the Polynomials related to coefficients $A_j$ are given by:
-$$P\left(s\right)=s^{K+1}+\left(S_{1,K}-u\right)s^K+\left(S_{2,K}-uS_{1,K}-\frac{1}{\Lambda^\alpha}\sum_{i=1}^{K}{\lambda_i^\alpha\beta_i}\right)s^{K-1}$$
+$$P_f\left(s\right)=s^{K+1}+\left(S_{1,K}-u\right)s^K+\left(S_{2,K}-uS_{1,K}-\frac{1}{\Lambda^\alpha}\sum_{i=1}^{K}{\lambda_i^\alpha\beta_i}\right)s^{K-1}$$
 
 $$+\sum_{i=3}^{K}{\left(S_{i,K}-uS_{i-1,K}-\frac{1}{\Lambda^\alpha}\sum_{j=1}^{K}{\lambda_j^\alpha\beta_jS_{i-2,K-1}^j}\right)s^{K+1-i}-uS_{K,K}}$$
 
 $$-\frac{1}{\Lambda^\alpha}\sum_{i=1}^{K}{\lambda_i^\alpha\beta_iS_{K-1,K-1}^i}; \tag{15}$$
 
-$$H(s)=\sum_{i=1}^{K}\lambda_i^\alpha C_i(0)s^{K-1}+\sum_{j=2}^{K} \sum_{i=1}^{K}{\lambda_i^\alpha C_i(0) S_{j-1,K-1}^i}s^{K-j}; \tag{16}$$ 
+$$H_f(s)=\sum_{i=1}^{K}\lambda_i^\alpha C_i(0)s^{K-1}+\sum_{j=2}^{K} \sum_{i=1}^{K}{\lambda_i^\alpha C_i(0) S_{j-1,K-1}^i}s^{K-j}; \tag{16}$$ 
 
 and:
-$$Q\left(s\right)=s^K+\sum_{j=1}^{K}{S_{j,K}s^{K-j}}, \tag{17}$$
+$$Q_f\left(s\right)=s^K+\sum_{j=1}^{K}{S_{j,K}s^{K-j}}, \tag{17}$$
 
 where the sums $S_{m,n}$ and $S_{m,n}^i$ are defined as:
 
