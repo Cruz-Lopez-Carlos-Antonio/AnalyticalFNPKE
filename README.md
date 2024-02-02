@@ -41,5 +41,6 @@ The Laplace transform of the Caputo's derivative fulfills the following relation
 
 $$\mathcal{L} \\{D_C^\alpha (t),s \\}=s^\alpha F\left(s\right)-\sum_{k=0}^{n-1}{s^{\alpha-k-1}f^{\left(k\right)}(0)}, \tag{6}$$
 
-where $F(s)=\mathcal{L} \\{f(t),s \\}$ and $f^{k}(0)$ represent the initial conditions of the function. 
+where $F(s)=\mathcal{L} \\{f(t),s \\}$ and $f^{k}(0)$ represent the initial conditions of the function. Applying the last relationship on both sides of Eq. (1) and Eq. (2), the following equations are obtained:
 
+$$s^\alpha\widetilde{n}\left(s\right)-s^{\alpha-1}n\left(0\right)=\frac{\rho-\beta}{\Lambda^\alpha}\widetilde{n}\left(t\right)+\sum_{i=1}^{K}{\lambda_i^\alpha{\widetilde{C}}_i}\left(s\right), \tag{7}$$
