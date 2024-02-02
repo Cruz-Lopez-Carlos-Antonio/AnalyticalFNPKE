@@ -112,8 +112,11 @@ $$S_m(\set{\lambda_1^\alpha,\lambda_2^\alpha,\ldots,\lambda_n^\alpha})=S_m(\set{
 
 Even more, using this function defined over sets, it is possible to compute the sum given in Eq. (19), that has a restriction over the indexes, as follows:
 $$S_{m,n}^i=S_m(\Omega^i)=S_m (\set{\lambda_1^\alpha,\lambda_2^\alpha,\ldots,\lambda_{i-1}^\alpha,\lambda_{i+1}^\alpha,\ldots,\lambda_n^\alpha})$$
-$$=S_m(\set{\lambda_k^\alpha |1\leq k\leq n,\ k\neq i})$$
+$$=S_m(\set{\lambda_k^\alpha |1\leq k\leq n,\ k\neq i}). \tag{23}$$
 
+Using this notation, it follows that:
+
+$$\lim_{\alpha\rightarrow1}{{\underbrace{S_m(\Omega)}}_ {\mathrm{Fractional\ case}}}=S\left(\lim_{\alpha\rightarrow1}{\Omega}\right)=S\left(\lim_{\alpha\rightarrow1}{\left\{\lambda_1^\alpha,\lambda_2^\alpha,\cdots,\lambda_n^\alpha\right\}}\right)$$
 
 It is possible to write the Polynomials as two variable functions that depend on $s$ as well as on $\alpha$:
 
