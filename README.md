@@ -51,4 +51,7 @@ Using a new procedure based on the symmetry between this fractional system and t
 
 $$\widetilde{n}\left(s\right)=\sum_{j=1}^{K+1}{A_j\frac{s^{\alpha-1}}{s^\alpha-p_{j,f}}}, \tag{9}$$
 
-$${\widetilde{C}}_{i}(s) =\frac{\beta_i}{\Lambda^\alpha} \sum _{j=1}^{K+1}A_j \frac{s^{\alpha-1}}{s^\alpha-p _{j,f}} \frac{1}{s^\alpha+\lambda_i^\alpha} +C_i\left(0\right)\frac{s^{\alpha-1}}{s^\alpha+\lambda_i^\alpha} $$
+$${\widetilde{C}}_{i}(s) =\frac{\beta_i}{\Lambda^\alpha} \sum _{j=1}^{K+1}A_j \frac{s^{\alpha-1}}{s^\alpha-p _{j,f}} \frac{1}{s^\alpha+\lambda_i^\alpha} +C_i\left(0\right)\frac{s^{\alpha-1}}{s^\alpha+\lambda_i^\alpha}, \tag{10}$$
+
+where the coefficients $A_j$ are constants defined as:
+$$A_j=\frac{n\left(0\right)Q_f\left(p_{j,f}\right)+H_f(p_{j,f})}{P_f^\prime(p_{j,f})} \tag{11}$$
