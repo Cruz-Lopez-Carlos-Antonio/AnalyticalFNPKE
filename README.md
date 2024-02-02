@@ -34,4 +34,11 @@ where $\alpha$ is the fractional order, $\Gamma(\cdot)$ is the Gamma function, a
 $$n-1 \leq \alpha \< n. \tag{5}$$
 
 This fractional version is different from the one proposed by Espinosa-Paredes et al. (2011), because it was developed in terms of a fractional mass balance approach, instead of a transport theory's one. The physical implications are discussed in detail in the submitted paper, but it can be understood, essentially, as a fractional compartmental model similar to the one developed in the Pharmacokinetic field (Dokoumetzidis, 2010).
+Nahla developed an analytic solution of a system related to Eq. (1) and Eq.(2) (2017) using the Laplace transform and a matrix approach. We proposed a different approach using algebraic theory of equations and a procedure that uses symmetry. 
+
+## 2. Laplace transform of the system.
+The Laplace transform of the Caputo's derivative fulfills the following relationship:
+
+$$\mathcal{L}\left\{D_C^\alpha f\left(t\right),s\right\}=s^\alpha F\left(s\right)-\sum_{k=0}^{n-1}{s^{\alpha-k-1}f^{\left(k\right)}(0)} \tag{6}$$
+
 
