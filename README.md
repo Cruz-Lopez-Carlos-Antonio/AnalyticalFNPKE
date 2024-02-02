@@ -31,4 +31,4 @@ $$D_C^\alpha f\left(t\right)=\frac{1}{\Gamma(n-\alpha)}\int_{0}^{t}{f^{\left(n\r
 
 where $\alpha$ is the fractional order, $\Gamma(\cdot)$ is the Gamma function, and $n \in \mathbb{N}$ fulfills the following inequality:
 
-$$n-1 \leq \alpha \le n \tag{5}$$
+$$n-1 \leq \alpha \< n \tag{5}$$
