@@ -57,3 +57,8 @@ where the coefficients $A_j$ are constants defined as:
 $$A_j=\frac{n\left(0\right)Q_f\left(p_{j,f}\right)+H_f(p_{j,f})}{P_f^\prime(p_{j,f})}, \tag{11}$$
 
 being $Q_f(s), H_f(s)$ and $P'_ f(s)=dP_f(s)/ds$ polynomials that are evaluated at the set of real numbers $p_{j,f}$, which in turn are the roots of the $P_f(s)$ polynomial. 
+
+## 3. Analytical solution and Polynomials.
+
+Using Eq. (9) and Eq. (10), it is possible to find the solutions of $n(t)$ and $C_i(0)$ as follows:
+
