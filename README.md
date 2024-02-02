@@ -12,3 +12,5 @@ The AnalyticFNPKE codes were written in the MATLAB programming language R2021a, 
 
 This last file can be freely download from the mathworks site in the following [link](https://www.mathworks.com/matlabcentral/fileexchange/48154-the-mittag-leffler-function).
 
+## Financial Support.
+The authors appreciate the financial support received from the Consejo Nacional de Humanidades, Ciencia y Tecnología (CONAHCYT), under the program *Estancias Posdoctorales por México, 2022*, with the project entitled: *Desarrollo de modelos fenomenológicos energéticos de orden fraccional, para la optimización y simulación en reactores nucleares de potencia*, by which the present development was possible.
