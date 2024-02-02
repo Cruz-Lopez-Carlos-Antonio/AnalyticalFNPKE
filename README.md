@@ -90,7 +90,7 @@ $$S_{m,n}^i=\sum_{k_1=1,\ k_1\neq i}^{n-m+1}{\ \sum_{k_2=k_1+1,k_2\neq i}^{n-m+2
 
 ## 4.Equivalence between the integer's solution and the fractional one. 
 
-It is possible to show that the developed solution can be reduced to the expressions related to the integer case. This last solution was developed in the work *A New Simplified Analytical Solution to Solve the Neutron Point Kinetics Equations Using the Laplace Transform Method*, which was also publised in the journal *Computer Physics Communications*. We made a particular repository for the integer case that can be consulted in the following [link](https://github.com/Cruz-Lopez-Carlos-Antonio/AnalyticNPKE/tree/main).
+It is possible to show that the developed solution can be reduced to the expressions related to the integer case. These last were developed in the work *A New Simplified Analytical Solution to Solve the Neutron Point Kinetics Equations Using the Laplace Transform Method*, which was publised in the journal *Computer Physics Communications*. We made a particular repository for the integer case that can be consulted in the following [link](https://github.com/Cruz-Lopez-Carlos-Antonio/AnalyticNPKE/tree/main).
 
 
 
