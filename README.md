@@ -84,5 +84,9 @@ $$Q_f\left(s\right)=s^K+\sum_{j=1}^{K}{S_{j,K}s^{K-j}}, \tag{17}$$
 
 where the sums $S_{m,n}$ and $S_{m,n}^i$ are defined as:
 
+$$ S_{m,n}=\sum_{k_1=1}^{n-m+1}\sum_{k_2=k_1+1}^{n-m+2} \cdots \sum_{k_m=k_{m-1}+1}^{n} {\lambda_{k_1}^{\alpha} \lambda_{k_2}^{\alpha} \cdots\lambda_{k_m}^{\alpha}}, \tag{18}$$
+
+$$S_{m,n}^i=\sum_{k_1=1,\ k_1\neq i}^{n-m+1}{\ \sum_{k_2=k_1+1,k_2\neq i}^{n-m+2}\cdots}\sum_{k_m=k_{m-1}+1,\ k_m\neq i}^{n}{\lambda_{k_1}\lambda_{k_2}\cdots\lambda_{k_m}}. \tag{19}$$
+
 
 
