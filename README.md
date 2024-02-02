@@ -66,7 +66,9 @@ $$n\left(t\right)=\sum_{j=1}^{K+1}A_jE_{\alpha,1}(p_{j,f}t^\alpha), \tag{12}$$
 
 $$C_i\left(t\right)=\frac{\beta_i}{\Lambda^\alpha}\sum_{j=1}^{K+1}A_j\frac{E_{\alpha,1}\left(p_{j,f}t^\alpha\right)-E_{\alpha,1}(-\lambda_i^\alpha t^\alpha)}{p_{j,f}+\lambda_i^\alpha}+C_i\left(0\right)E_{\alpha,1}(-\lambda_i^\alpha t^\alpha), \tag{13}$$
 
-where $E_{\alpha,1}(z)$ is the Mittag-Leffler function, which can be defined as:
+where $E_{\alpha,1}(z)$ is the Mittag-Leffler function, which can be defined as (Gorenflo et al., 2020, p. 64):
+
+$$E_{\alpha,\beta}\left(z\right)=\sum_{k=0}^{\infty}\frac{z^k}{\Gamma(k\alpha+\beta)},\ \tag{14}$$ 
 
 
 
