@@ -20,7 +20,7 @@ Following the ideas of Ray and Patra (2014), a compartmental version of the The 
 
 $$D_C^\alpha n\left(t\right)=\frac{\rho\left(t\right)-\beta}{\Lambda^\alpha}n\left(t\right)+\sum_{i=1}^{K}{\lambda_i^\alpha C_i(t)}, \tag{1}$$
 
-$$D_C^\alpha C\left(t\right)=\frac{\beta_i}{\Lambda^\alpha}n\left(t\right)-\lambda_i^\alpha C_i\left(t\right),\ \ \ \ \ 1\le\ i\le\ K \tag{2}$$,
+$$D_C^\alpha C\left(t\right)=\frac{\beta_i}{\Lambda^\alpha}n\left(t\right)-\lambda_i^\alpha C_i\left(t\right),\ \ \ \ \ 1\le\ i\le\ K, \tag{2}$$
 
 where $n(t)$ denotes the neutron density and $\rho(t)$  the reactivity. $C(t),\lambda_k,\beta_k$ are the concentration, the decay constant and the fraction of the $k$-group of precursors of the delayed neutrons, respectively. $\Lambda$ represents the prompt neutron generation time,  $\beta$ is given by:
 
@@ -28,3 +28,5 @@ $$\sum_{k=1}^{K}\beta_k=\beta, \tag{3}$$
 
 and the operator $D_C^\alpha$ denotes the fractional derivative of Caputo, defined as:
 $$D_C^\alpha f\left(t\right)=\frac{1}{\Gamma(n-\alpha)}\int_{0}^{t}{f^{\left(n\right)}\left(\tau\right)\left(t-\tau\right)^{n-\alpha-1}d\tau}, \tag{4}$$
+
+where $\alpha$ is the fractional order, and $n \in \mathbb{N}$ fulfills the following inequality 
