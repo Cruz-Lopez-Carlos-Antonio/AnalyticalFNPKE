@@ -80,6 +80,9 @@ $$-\frac{1}{\Lambda^\alpha}\sum_{i=1}^{K}{\lambda_i^\alpha\beta_iS_{K-1,K-1}^i};
 $$H(s)=\sum_{i=1}^{K}\lambda_i^\alpha C_i(0)s^{K-1}+\sum_{j=2}^{K} \sum_{i=1}^{K}{\lambda_i^\alpha C_i(0) S_{j-1,K-1}^i}s^{K-j}; \tag{16}$$ 
 
 and:
-$$Q\left(s\right)=s^K+\sum_{j=1}^{K}{S_{j,K}s^{K-j}} \tag{17}$$
+$$Q\left(s\right)=s^K+\sum_{j=1}^{K}{S_{j,K}s^{K-j}}, \tag{17}$$
+
+where the sums $S_{m,n}$ and $S_{m,n}^i& are defined as:
+
 
 
