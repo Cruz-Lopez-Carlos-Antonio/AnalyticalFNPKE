@@ -6,7 +6,7 @@ The programs are licensed under a Creative Commons Attribution 4.0 International
 Authors: Carlos-Antonio Cruz-López (cacl.nucl@gmail.com), Gilberto Espinosa-Paredes (gepe@xanum.uam.mx)
 
 Mathematical and algorithmical generalities of the codes are described in the following lines with the purpose to provide some insight of the developed work. Nevertheless, a more detailed discussion is provided in the submitted article.
-## Software specifications.
+## Software specifications and requirements. 
 The AnalyticFNPKE codes were written in the MATLAB programming language R2021a, but older versions can be used, from the R2012b one onward. The reported examples and results were obtained in a 3.8 GHz desktop computer, with 32 Gb of RAM and under a Windows 11 environment. The developed codes require the following script, which was written by Roberto Garrappa (2015, 2024):
 - [x] ml.m
 
