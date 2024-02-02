@@ -73,5 +73,7 @@ $$E_{\alpha,\beta}\left(z\right)=\sum_{k=0}^{\infty}\frac{z^k}{\Gamma(k\alpha+\b
 with $\mathfrak{R}\left(\alpha\right)>0,\ \beta\in\mathbb{C}$. On the other hand, explicit expressions of the Polynomials related to coefficients $A_j$ are given by:
 $$P\left(s\right)=s^{K+1}+\left(S_{1,K}-u\right)s^K+\left(S_{2,K}-uS_{1,K}-\frac{1}{\Lambda^\alpha}\sum_{i=1}^{K}{\lambda_i^\alpha\beta_i}\right)s^{K-1}$$
 
+$$+\sum_{i=3}^{K}{\left(S_{i,K}-uS_{i-1,K}-\frac{1}{\Lambda^\alpha}\sum_{j=1}^{K}{\lambda_j^\alpha\beta_jS_{i-2,K-1}^j}\right)s^{K+1-i}-uS_{K,K}}$$
+
 
 
