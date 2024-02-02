@@ -98,7 +98,7 @@ It is possible to show that the developed solution can be reduced to the express
 
 ## 4.1 Equivalence between the sums.
 It is possible to understand the sums that were defined in Eq. (17) and Eq. (18) as functions over a set. In fact, it follows that:
-$$\mathcal{S}_m:\Omega\rightarrow\mathbb{R}, m\in \doubleN, m\leq n$$
+$$\mathcal{S}_m:\Omega\rightarrow\mathbb{R}, m\in \mathbb{N}, m\leq n$$
 
 
 It is possible to write the Polynomials as two variable functions that depend on $s$ as well as on $\alpha$:
