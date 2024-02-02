@@ -100,7 +100,8 @@ It is possible to show that the developed solution can be reduced to the express
 It is possible to understand the sums that were defined in Eq. (18) and Eq. (19) as functions over a set. In fact, it is necessary to define:
 
 $$\mathcal{S}_m:\Omega\rightarrow\mathbb{R}, m\in \mathbb{N}, m\leq n,$$
-with:
+
+where $\Omega$ is a set of real numbers given by $\Omega = \set{a_1,a_2,\cdots,a_n}$, and:
 
 $$S_m(\Omega)=S_m(\set{a_1,a_2,\ldots,a_n})=\sum_{k_1=1}^{n-m+1} \sum_{k_2=k_1+1}^{n-m+2}\cdots \sum_{k_m=k_{m-1}+1}^{n}{a_{k_1}a_{k_2}\cdots a_{k_m}}. \tag{21}$$
 
