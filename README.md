@@ -39,7 +39,7 @@ Nahla developed an analytic solution of a system related to Eq. (1) and Eq.(2) (
 ## 2. Laplace transform of the system.
 The Laplace transform of the Caputo's derivative fulfills the following relationship:
 
-$$\mathcal{L} \{ \}  D_C^\alpha (t),s \}$$
+$$\mathcal{L} \{ \}  $$
 
 =s^\alpha F\left(s\right)-\sum_{k=0}^{n-1}{s^{\alpha-k-1}f^{\left(k\right)}(0)} \tag{6}
 
