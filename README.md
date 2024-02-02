@@ -49,6 +49,6 @@ $$s^\alpha{\widetilde{C}}_i\left(s\right)-s^{\alpha-1}C_i\left(0\right)=\frac{\b
 
 Using a new procedure based on the symmetry between this fractional system and the integer one, it is possible to rewrite the last systems of equations as follows:
 
-$$\widetilde{n}\left(s\right)=\sum_{j=1}^{K+1}{A_j\frac{s^{\alpha-1}}{s^\alpha-p_{j,f}}} \tag{9}$$
+$$\widetilde{n}\left(s\right)=\sum_{j=1}^{K+1}{A_j\frac{s^{\alpha-1}}{s^\alpha-p_{j,f}}}, \tag{9}$$
 
-$$
+$${\widetilde{C}}_i\left(s\right)=\frac{\beta_i}{\Lambda^\alpha}\sum_{j=1}^{K+1}A_j\frac{s^{\alpha-1}}{s^\alpha-p_{j,f}}\frac{1}{s^\alpha+\lambda_i^\alpha}+C_i\left(0\right)\frac{s^{\alpha-1}}{s^\alpha+\lambda_i^\alpha} \tag{10}$$
