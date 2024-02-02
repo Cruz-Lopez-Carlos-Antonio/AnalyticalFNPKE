@@ -96,10 +96,11 @@ $$u=\frac{\rho-\beta}{\Lambda^\alpha} \tag{20}$$
 
 It is possible to show that the developed solution can be reduced to the expressions related to the integer case. These last were developed in the work *A New Simplified Analytical Solution to Solve the Neutron Point Kinetics Equations Using the Laplace Transform Method*, which was publised in the journal *Computer Physics Communications*. We made a particular repository for the integer case that can be consulted in the following [link](https://github.com/Cruz-Lopez-Carlos-Antonio/AnalyticNPKE/tree/main).
 
-## 4.1 Equivalence between the sums.
+### 4.1 Equivalence between the sums.
 It is possible to understand the sums that were defined in Eq. (17) and Eq. (18) as functions over a set. In fact, it follows that:
-$$\mathcal{S}_m:\Omega\rightarrow\mathbb{R}, m\in \mathbb{N}, m\leq n$$
-
+$$\mathcal{S}_m:\Omega\rightarrow\mathbb{R}, m\in \mathbb{N}, m\leq n,$$
+with:
+$$S_ m\left(\Omega\right)=S_ m\left(\left\{a_1,a_2,\ldots,a_n\right\}\right)=\sum_{k_1=1}^{n-m+1}{\sum_{k_2=k_1+1}^{n-m+2}\cdots\sum_{k_m=k_{m-1}+1}^{n}{a_{k_1}a_{k_2}\cdots}a_{k_m}}$$
 
 It is possible to write the Polynomials as two variable functions that depend on $s$ as well as on $\alpha$:
 
