@@ -98,10 +98,17 @@ It is possible to show that the developed solution can be reduced to the express
 
 ### 4.1 Equivalence between the sums.
 It is possible to understand the sums that were defined in Eq. (18) and Eq. (19) as functions over a set. In fact, it follows that:
+
 $$\mathcal{S}_m:\Omega\rightarrow\mathbb{R}, m\in \mathbb{N}, m\leq n,$$
 with:
 
-$$S_m(\Omega)=S_m(\set{a_1,a_2,\ldots,a_n})=\sum_{k_1=1}^{n-m+1} \sum_{k_2=k_1+1}^{n-m+2}\cdots \sum_{k_m=k_{m-1}+1}^{n}{a_{k_1}a_{k_2}\cdots a_{k_m}}$$
+$$S_m(\Omega)=S_m(\set{a_1,a_2,\ldots,a_n})=\sum_{k_1=1}^{n-m+1} \sum_{k_2=k_1+1}^{n-m+2}\cdots \sum_{k_m=k_{m-1}+1}^{n}{a_{k_1}a_{k_2}\cdots a_{k_m}}.$$
+
+Therefore, the sums can be rewritten as follows:
+
+$$S_m\left(\left\{\lambda_1^\alpha,\lambda_2^\alpha,\ldots,\lambda_n^\alpha\right\}\right)=S_m(\left\{\lambda_i^\alpha\right|1\le\ i\le\ n})\ $$
+
+
 
 It is possible to write the Polynomials as two variable functions that depend on $s$ as well as on $\alpha$:
 
