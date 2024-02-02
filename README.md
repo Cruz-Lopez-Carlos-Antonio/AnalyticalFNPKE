@@ -86,7 +86,11 @@ where the sums $S_{m,n}$ and $S_{m,n}^i$ are defined as:
 
 $$ S_{m,n}=\sum_{k_1=1}^{n-m+1}\sum_{k_2=k_1+1}^{n-m+2} \cdots \sum_{k_m=k_{m-1}+1}^{n} {\lambda_{k_1}^{\alpha} \lambda_{k_2}^{\alpha} \cdots\lambda_{k_m}^{\alpha}}, \tag{18}$$
 
-$$S_{m,n}^i=\sum_{k_1=1,\ k_1\neq i}^{n-m+1}{\ \sum_{k_2=k_1+1,k_2\neq i}^{n-m+2}\cdots}\sum_{k_m=k_{m-1}+1,\ k_m\neq i}^{n}{\lambda_{k_1}^{\alpha} \lambda_{k_2}^{\alpha} \cdots\lambda_{k_m}^{\alpha}}. \tag{19}$$
+$$S_{m,n}^i=\sum_{k_1=1,\ k_1\neq i}^{n-m+1}{\ \sum_{k_2=k_1+1,k_2\neq i}^{n-m+2}\cdots}\sum_{k_m=k_{m-1}+1,\ k_m\neq i}^{n}{\lambda_{k_1}^{\alpha} \lambda_{k_2}^{\alpha} \cdots\lambda_{k_m}^{\alpha}}, \tag{19}$$
+
+and:
+$$u=\frac{\rho-\beta}{\Lambda^\alpha} \tag{20}$$
+
 
 ## 4.Equivalence between the integer's solution and the fractional one. 
 
