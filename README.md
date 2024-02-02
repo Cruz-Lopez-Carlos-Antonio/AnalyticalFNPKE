@@ -27,3 +27,4 @@ where $n(t)$ denotes the neutron density and $\rho(t)$  the reactivity. $C(t),\l
 $$\sum_{k=1}^{K}\beta_k=\beta, \tag{3}$$
 
 and the operator $D_C^\alpha$ denotes the fractional derivative of Caputo, defined as:
+$$D_C^\alpha f\left(t\right)=\frac{1}{\Gamma(n-\alpha)}\int_{0}^{t}{f^{\left(n\right)}\left(\tau\right)\left(t-\tau\right)^{n-\alpha-1}d\tau}, \tag{4}$$
