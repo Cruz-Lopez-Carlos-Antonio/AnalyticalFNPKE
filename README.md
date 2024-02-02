@@ -82,7 +82,7 @@ $$H(s)=\sum_{i=1}^{K}\lambda_i^\alpha C_i(0)s^{K-1}+\sum_{j=2}^{K} \sum_{i=1}^{K
 and:
 $$Q\left(s\right)=s^K+\sum_{j=1}^{K}{S_{j,K}s^{K-j}}, \tag{17}$$
 
-where the sums $S_{m,n}$ and $S_{m,n}^i& are defined as:
+where the sums $S_{m,n}$ and $S_{m,n}^i$ are defined as:
 
 
 
