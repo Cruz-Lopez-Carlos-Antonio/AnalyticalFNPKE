@@ -75,7 +75,9 @@ $$P\left(s\right)=s^{K+1}+\left(S_{1,K}-u\right)s^K+\left(S_{2,K}-uS_{1,K}-\frac
 
 $$+\sum_{i=3}^{K}{\left(S_{i,K}-uS_{i-1,K}-\frac{1}{\Lambda^\alpha}\sum_{j=1}^{K}{\lambda_j^\alpha\beta_jS_{i-2,K-1}^j}\right)s^{K+1-i}-uS_{K,K}}$$
 
-$$-\frac{1}{\Lambda^\alpha}\sum_{i=1}^{K}{\lambda_i^\alpha\beta_iS_{K-1,K-1}^i}$$
+$$-\frac{1}{\Lambda^\alpha}\sum_{i=1}^{K}{\lambda_i^\alpha\beta_iS_{K-1,K-1}^i} \tag{15}$$
+
+$$H\left(s\right)=\left(\sum_{i=1}^{K}{\lambda_i^\alpha C_i\left(0\right)}\right)s^{K-1}+\sum_{j=2}^{K}{\left(\sum_{i=1}^{K}{\lambda_i^\alpha C_i\left(0\right)S_{j-1,K-1}^i}\right)s^{K-j}; \tag{16}$$
 
 
 
