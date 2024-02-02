@@ -106,8 +106,9 @@ $$S_m(\Omega)=S_m(\set{a_1,a_2,\ldots,a_n})=\sum_{k_1=1}^{n-m+1} \sum_{k_2=k_1+1
 
 Therefore, the sums can be rewritten as follows:
  
-$$S_m(\set{\lambda_1^\alpha,\lambda_2^\alpha,\ldots,\lambda_n^\alpha})=S_m(\set{\lambda_i^\alpha\|1\leq i \leq\ n})\ = S_{m,n} \tag{22}$$
+$$S_m(\set{\lambda_1^\alpha,\lambda_2^\alpha,\ldots,\lambda_n^\alpha})=S_m(\set{\lambda_i^\alpha\|1\leq i \leq\ n})\ = S_{m,n}. \tag{22}$$
 
+Even more, using this function defined over sets, it is possible to compute the sum given in Eq. that has a restriction over the indexes 
 
 
 It is possible to write the Polynomials as two variable functions that depend on $s$ as well as on $\alpha$:
