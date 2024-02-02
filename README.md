@@ -99,6 +99,7 @@ It is possible to show that the developed solution can be reduced to the express
 ### 4.1 Equivalence between the sums.
 It is possible to understand the sums that were defined in Eq. (18) and Eq. (19) as functions over a set. In fact, it is necessary to define:
 
+
 $$\mathcal{S}_m:\Omega\rightarrow\mathbb{R}, m\in \mathbb{N}, m\leq n,$$
 
 where $\Omega$ is a set of real numbers given by $\Omega = \set{a_1,a_2,\cdots,a_n}$, and:
