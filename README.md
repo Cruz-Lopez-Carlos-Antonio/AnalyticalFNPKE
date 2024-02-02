@@ -110,6 +110,7 @@ $$S_m(\set{\lambda_1^\alpha,\lambda_2^\alpha,\ldots,\lambda_n^\alpha})=S_m(\set{
 
 Even more, using this function defined over sets, it is possible to compute the sum given in Eq. (19), that has a restriction over the indexes, as follows:
 $$S_{m,n}^i=S_m(\Omega^i)=S_m (\set{\lambda_1^\alpha,\lambda_2^\alpha,\ldots,\lambda_{i-1}^\alpha,\lambda_{i+1}^\alpha,\ldots,\lambda_n^\alpha})$$
+$$=S_m(\set{\lambda_k^\alpha \middle|1\leq k\leq n,\ k\neq i})$$
 
 
 It is possible to write the Polynomials as two variable functions that depend on $s$ as well as on $\alpha$:
