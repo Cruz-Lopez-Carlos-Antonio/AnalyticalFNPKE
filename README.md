@@ -56,4 +56,4 @@ $${\widetilde{C}}_{i}(s) =\frac{\beta_i}{\Lambda^\alpha} \sum _{j=1}^{K+1}A_j \f
 where the coefficients $A_j$ are constants defined as:
 $$A_j=\frac{n\left(0\right)Q_f\left(p_{j,f}\right)+H_f(p_{j,f})}{P_f^\prime(p_{j,f})}, \tag{11}$$
 
-being $Q_f(s), H_f(s)$ and $P'_ f(s)=dP(s)/ds$ polynomials that are evaluated at the set of $p_{j,f}$, which in turn are the roots of the $P_f(s)$ polynomial. 
+being $Q_f(s), H_f(s)$ and $P'_ f(s)=dP_f(s)/ds$ polynomials that are evaluated at the set of $p_{j,f}$, which in turn are the roots of the $P_f(s)$ polynomial. 
