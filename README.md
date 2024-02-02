@@ -106,7 +106,7 @@ $$S_m(\Omega)=S_m(\set{a_1,a_2,\ldots,a_n})=\sum_{k_1=1}^{n-m+1} \sum_{k_2=k_1+1
 
 Therefore, the sums can be rewritten as follows:
 
-$$S_m\left(\left\{\lambda_1^\alpha,\lambda_2^\alpha,\ldots,\lambda_n^\alpha\right\}\right)=S_m(\left\{\lambda_i^\alpha\right|1\le\ i\le\ n})\ $$
+$$S_m(\set{\lambda_1^\alpha,\lambda_2^\alpha,\ldots,\lambda_n^\alpha})=S_m(\set{\lambda_i^\alpha\|1\leq i \leq\ n})\ $$
 
 
 
