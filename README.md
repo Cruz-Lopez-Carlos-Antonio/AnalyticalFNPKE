@@ -37,7 +37,7 @@ This fractional version is different from the one proposed by Espinosa-Paredes e
 Nahla developed an analytic solution of a system related to Eq. (1) and Eq.(2) (2017) using the Laplace transform and a matrix approach. We proposed a different approach using algebraic theory of equations and a procedure that uses symmetry. 
 
 ## 2. Laplace transform of the system.
-The Laplace transform of the Caputo's derivative fulfills the following relationship:
+The Laplace transform of the Caputo's derivative fulfills the following relationship (Ishteva, 2005, p. 21):
 
 $$\mathcal{L} \\{D_C^\alpha (t),s \\}=s^\alpha F\left(s\right)-\sum_{k=0}^{n-1}{s^{\alpha-k-1}f^{\left(k\right)}(0)}, \tag{6}$$
 
