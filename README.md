@@ -121,7 +121,11 @@ $$\lim_{\alpha \rightarrow 1} \underbrace{S_m(\Omega)}_ {\mathrm{Fractional\ cas
 This last expression is identical to one that is given for the integer case, as it can be corroborated in the following [link](https://github.com/Cruz-Lopez-Carlos-Antonio/AnalyticNPKE#4-simplification-of-the-polynomials). A similar proof can be done for the case of $S_{m,n}^i$. 
 ### 4.2 Equivalence between the Polynomials. 
 
-Once the equivalcente between the sums has been proved, it is possible to show the equivalcence of the Polynomials. This last can be done in a straighforward way writting the 
+Once the equivalcente between the sums has been proved, it is possible to show the equivalcence of the Polynomials. This last can be done in a straighforward way observing that the polynomials can be written in terms of two variables as follows:
+
+$$\lim_{\alpha\rightarrow1}{P_f(s,\alpha)}=\lim_{\alpha\rightarrow1}{s^{K+1}+\left(\fbox{$S_{1,K}$}-\frac{\rho-\beta}{\Lambda^{\fbox{$\alpha$}}}\right)s^K}$$
+
+
 It is possible to write the Polynomials as two variable functions that depend on $s$ as well as on $\alpha$:
 
 
