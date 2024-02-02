@@ -62,9 +62,12 @@ being $Q_f(s), H_f(s)$ and $P'_ f(s)=dP_f(s)/ds$ polynomials that are evaluated 
 
 Using Eq. (9) and Eq. (10), it is possible to find the solutions of $n(t)$ and $C_i(0)$ as follows:
 
-$$n\left(t\right)=\sum_{j=1}^{K+1}A_jE_{\alpha,1}(p_{j,f}t^\alpha) \tag{12}$$
+$$n\left(t\right)=\sum_{j=1}^{K+1}A_jE_{\alpha,1}(p_{j,f}t^\alpha), \tag{12}$$
 
-$$C_i\left(t\right)=\frac{\beta_i}{\Lambda^\alpha}\sum_{j=1}^{K+1}A_j\frac{E_{\alpha,1}\left(p_{j,f}t^\alpha\right)-E_{\alpha,1}(-\lambda_i^\alpha t^\alpha)}{p_{j,f}+\lambda_i^\alpha}+C_i\left(0\right)E_{\alpha,1}(-\lambda_i^\alpha t^\alpha) \tag{13}$$
+$$C_i\left(t\right)=\frac{\beta_i}{\Lambda^\alpha}\sum_{j=1}^{K+1}A_j\frac{E_{\alpha,1}\left(p_{j,f}t^\alpha\right)-E_{\alpha,1}(-\lambda_i^\alpha t^\alpha)}{p_{j,f}+\lambda_i^\alpha}+C_i\left(0\right)E_{\alpha,1}(-\lambda_i^\alpha t^\alpha), \tag{13}$$
+
+where $E_{\alpha,1}(z)$ is the Mittag-Leffler function, which can be defined as:
+
 
 
 
