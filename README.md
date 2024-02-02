@@ -46,3 +46,7 @@ where $F(s)=\mathcal{L} \\{f(t),s \\}$ denotes the standard Laplace transform of
 $$s^\alpha\widetilde{n}\left(s\right)-s^{\alpha-1}n\left(0\right)=\frac{\rho-\beta}{\Lambda^\alpha}\widetilde{n}\left(t\right)+\sum_{i=1}^{K}{\lambda_i^\alpha{\widetilde{C}}_i}\left(s\right), \tag{7}$$
 
 $$s^\alpha{\widetilde{C}}_i\left(s\right)-s^{\alpha-1}C_i\left(0\right)=\frac{\beta_i}{\Lambda^\alpha}\widetilde{n}\left(s\right)-\lambda_i^\alpha{\widetilde{C}}_i(s). \tag{8}$$
+
+Using a new procedure based on the symmetry between this fractional system and the integer one, it is possible to rewrite the last systems of equations as follows:
+
+$$\widetilde{n}\left(s\right)=\sum_{j=1}^{K+1}{\frac{n\left(0\right)Q_f\left(p_{j,f}\right)+H_f(p_{j,f})}{P\prime(p_{j,f})}\frac{s^{\alpha-1}}{s^\alpha-p_{j,f}}}$$
