@@ -116,8 +116,11 @@ $$=S_m(\set{\lambda_k^\alpha |1\leq k\leq n,\ k\neq i}). \tag{23}$$
 
 Using this notation, it follows that:
 
-$$\lim_{\alpha \rightarrow 1} \underbrace{S_m(\Omega)}_ {\mathrm{Fractional\ case}}= S_m(\lim_{\alpha \rightarrow 1}{\Omega})=S_m(\lim_{\alpha \rightarrow 1} \set{\lambda_1^\alpha,\lambda_2^\alpha,\cdots,\lambda_n^\alpha}) = S_m(\set{\lambda_1,\lambda_2,\cdots,\lambda_n}) =\underbrace{S_m(\set{\lambda_1,\lambda_2,\ldots,\lambda_n}}_{\mathrm{Integer\ case}} \tag{24}$$
+$$\lim_{\alpha \rightarrow 1} \underbrace{S_m(\Omega)}_ {\mathrm{Fractional\ case}}= S_m(\lim_{\alpha \rightarrow 1}{\Omega})=S_m(\lim_{\alpha \rightarrow 1} \set{\lambda_1^\alpha,\lambda_2^\alpha,\cdots,\lambda_n^\alpha}) = S_m(\set{\lambda_1,\lambda_2,\cdots,\lambda_n}) =\underbrace{S_m(\set{\lambda_1,\lambda_2,\ldots,\lambda_n}}_{\mathrm{Integer\ case}}. \tag{24}$$
 
+This last expression is identical to one that is given for the integer case, as it can be corroborated in the following [link](https://github.com/Cruz-Lopez-Carlos-Antonio/AnalyticNPKE#4-simplification-of-the-polynomials)
+A similar proof can be done for the case of $S_{m,n}^i$. 
+### 4.2 
 
 
 It is possible to write the Polynomials as two variable functions that depend on $s$ as well as on $\alpha$:
