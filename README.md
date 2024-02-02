@@ -31,4 +31,7 @@ $$D_C^\alpha f\left(t\right)=\frac{1}{\Gamma(n-\alpha)}\int_{0}^{t}{f^{\left(n\r
 
 where $\alpha$ is the fractional order, $\Gamma(\cdot)$ is the Gamma function, and $n \in \mathbb{N}$ fulfills the following inequality:
 
-$$n-1 \leq \alpha \< n \tag{5}$$
+$$n-1 \leq \alpha \< n. \tag{5}$$
+
+This fractional version is different from the one proposed by Espinosa-Paredes et al. (2011), because it was developed in terms of a fractional mass balance approach, instead of a transport theory's one. The physical implications are discussed in detail in the submitted paper, but it can be understood, essentially, as a fractional compartmental model similar to the one developed in the Pharmacokinetic field (Dokoumetzidis, 2010).
+
