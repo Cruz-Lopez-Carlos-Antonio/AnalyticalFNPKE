@@ -47,7 +47,7 @@ $$s^\alpha\widetilde{n}\left(s\right)-s^{\alpha-1}n\left(0\right)=\frac{\rho-\be
 
 $$s^\alpha{\widetilde{C}}_i\left(s\right)-s^{\alpha-1}C_i\left(0\right)=\frac{\beta_i}{\Lambda^\alpha}\widetilde{n}\left(s\right)-\lambda_i^\alpha{\widetilde{C}}_i(s). \tag{8}$$
 
-Using a new procedure based on the symmetry between this fractional system and the integer one, it is possible to rewrite the last systems of equations as follows:
+Using a new procedure based on the symmetry between this fractional system and the integer one, it is possible to rewrite the last systems of equation as follows:
 
 $$\widetilde{n}\left(s\right)=\sum_{j=1}^{K+1}{A_j\frac{s^{\alpha-1}}{s^\alpha-p_{j,f}}}, \tag{9}$$
 
