@@ -49,4 +49,6 @@ $$s^\alpha{\widetilde{C}}_i\left(s\right)-s^{\alpha-1}C_i\left(0\right)=\frac{\b
 
 Using a new procedure based on the symmetry between this fractional system and the integer one, it is possible to rewrite the last systems of equations as follows:
 
-$$\widetilde{n}\left(s\right)=\sum_{j=1}^{K+1}{\frac{n\left(0\right)Q_f\left(p_{j,f}\right)+H_f(p_{j,f})}{P\prime(p_{j,f})}\frac{s^{\alpha-1}}{s^\alpha-p_{j,f}}}$$
+$$\widetilde{n}\left(s\right)=\sum_{j=1}^{K+1}{A_j\frac{s^{\alpha-1}}{s^\alpha-p_{j,f}}} \tag{9}$$
+
+$$
