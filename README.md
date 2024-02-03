@@ -142,6 +142,6 @@ where the form of the polynomial $P(s)$ can be consulted in the following [link]
 
 From the definition given in Eq. (14), it follows that:
 
-$$\lim_{\alpha \rightarrow 1}E_{\alpha,1}(z)=\sum_{k=0}^{\infty}\frac{z^k}{\Gamma(\alpha k+1)}}=\sum_{k=0}^{\infty} \lim_{\alpha \rightarrow 1}{\frac{z^k}{\Gamma(\alpha k+1)}}$$
+$$\lim_{\alpha \rightarrow 1} E_{\alpha,1}(z)=\sum_{k=0}^{\infty} \frac{z^k}{\Gamma(\alpha k+1)}=\sum_{k=0}^{\infty} \lim_{\alpha \rightarrow 1} \frac{z^k}{\Gamma(\alpha k+1)}$$
 
 
