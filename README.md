@@ -133,7 +133,7 @@ $$+\sum_{i=3}^{K}{\left(\fbox{$S_{i,K}$}-\frac{\rho-\beta}{\Lambda^{\fbox{$\alph
 
 $$-\frac{\rho-\beta}{\Lambda^{\fbox{$\alpha$}}}\fbox{$S_{K,K}$}-\frac{1}{\Lambda^{\fbox{$\alpha$}}}\sum_{i=1}^{K}{\lambda_i^{\fbox{$\alpha$}}\beta_i\fbox{$S_{K-1,K-1}^i$}}. \tag{25}$$
 
-All the parts that depend on the fractional order $\alpha$ have been enclosed in a box, with the purpose to show the explicit dependence of that parameter. From Eq. (25) it follows that:
+All the parts that depend on the fractional order $\alpha$ have been enclosed in a box, with the purpose to show the explicit dependence of that parameter. From Eq. (25) and Eq. (25) |it follows that:
 
 $$\lim_{\alpha \rightarrow 1} \underbrace{P_f (s,\alpha)} _ {\mathrm{Fractional\ case}}=\underbrace{P(s)}_{\mathrm{Integer\ case}}, \tag{26}$$
 
