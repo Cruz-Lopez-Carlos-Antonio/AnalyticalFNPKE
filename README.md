@@ -140,6 +140,8 @@ $$\lim_{\alpha \rightarrow 1} \underbrace{P_f (s,\alpha)} _ {\mathrm{Fractional\
 where the form of the polynomial $P(s)$ can be consulted in the following [link](https://github.com/Cruz-Lopez-Carlos-Antonio/AnalyticNPKE#4-simplification-of-the-polynomials). Similar proofs can be carried out for the polynomials $H(s)$ and $Q(s)$. 
 ### 4.3 Equivalence between the Mittag-Leffler function and the exponential one. 
 
+From the definition given in Eq. (14), it follows that:
 
+$$\lim_{\alpha \rightarrow 1}E_{\alpha,1}(z)=\sum_{k=0}^{\infty}\frac{z^k}{\Gamma(\alpha k+1)}}=\sum_{k=0}^{\infty} \lim_{\alpha \rightarrow 1}{\frac{z^k}{\Gamma(\alpha k+1)}}$$
 
 
