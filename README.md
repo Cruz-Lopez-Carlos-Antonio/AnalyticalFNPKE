@@ -137,6 +137,9 @@ All the parts that depend on the fractional order $\alpha$ have been enclosed in
 
 $$\lim_{\alpha \rightarrow 1} \underbrace{P_f (s,\alpha)} _ {\mathrm{Fractional\ case}}=\underbrace{P(s)}_{\mathrm{Integer\ case}}, \tag{26}$$
 
-where the form of the polynomial $P(s)$ can be consulted in the following [link](https://github.com/Cruz-Lopez-Carlos-Antonio/AnalyticNPKE#4-simplification-of-the-polynomials).
+where the form of the polynomial $P(s)$ can be consulted in the following [link](https://github.com/Cruz-Lopez-Carlos-Antonio/AnalyticNPKE#4-simplification-of-the-polynomials). Similar proofs can be carried out for the polynomials $H(s)$ and $Q(s)$. 
+### 4.3 Equivalence between the Mittag-Leffler function and the exponential one. 
+
+
 
 
