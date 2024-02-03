@@ -131,7 +131,10 @@ $$+ \left(\fbox{$S_{2,K}$}-\frac{\rho-\beta}{\Lambda^{\fbox{$\alpha$}}}\fbox{$S_
 
 $$+\sum_{i=3}^{K}{\left(\fbox{$S_{i,K}$}-\frac{\rho-\beta}{\Lambda^{\fbox{$\alpha$}}}\fbox{$S_{i-1,K}$}-\frac{1}{\Lambda^{\fbox{$\alpha$}}}\sum_{j=1}^{K}{\lambda_j^{\fbox{$\alpha$}}\beta_j\fbox{$S_{i-2,K-1}^j$}}\right)s^{K+1-i}-\frac{\rho-\beta}{\Lambda^{\fbox{$\alpha$}}}\fbox{$S_{K,K}$}}$$
 
-$$-\frac{\rho-\beta}{\Lambda^{\fbox{$\alpha$}}}\fbox{$S_{K,K}$}-\frac{1}{\Lambda^{\fbox{$\alpha$}}}\sum_{i=1}^{K}{\lambda_i^{\fbox{$\alpha$}}\beta_i\fbox{$S_{K-1,K-1}^i$}}$$
+$$-\frac{\rho-\beta}{\Lambda^{\fbox{$\alpha$}}}\fbox{$S_{K,K}$}-\frac{1}{\Lambda^{\fbox{$\alpha$}}}\sum_{i=1}^{K}{\lambda_i^{\fbox{$\alpha$}}\beta_i\fbox{$S_{K-1,K-1}^i$}}. \tag{25}$$
+
+All the parts that depend on the fractional order $\alpha$ have been enclosed in a box, with the purpose to show the explicit dependnce of that parameter. From Eq. (25) it follows that:
+
 
 
 It is possible to write the Polynomials as two variable functions that depend on $s$ as well as on $\alpha$:
