@@ -146,3 +146,6 @@ $$\lim_{\alpha \rightarrow 1} E_{\alpha,1}(z)=\sum_{k=0}^{\infty} \frac{z^k}{\Ga
 
 $$=\sum_{k=0}^{\infty} \frac{z^k}{\Gamma(k+1)}=\sum_{k=0}^{\infty}\frac{z^k}{k!}=\exp(z)$$
 
+where the limit has been interchanged with the series due to the absolute convergence of the Mittag-Leffler function. Combining the results given in **Section 4.1**, **Section 4.2** and in the present section, it follows that the analytic solution of the FNPKE is obtained from the analytical solution of the fractional version. This result is relevant in terms of the algorithmical implementation, because allows extending all the codes that were developed for the NPKE (which can be consulted [here](https://github.com/Cruz-Lopez-Carlos-Antonio/AnalyticNPKE#4-simplification-of-the-polynomials).
+
+
