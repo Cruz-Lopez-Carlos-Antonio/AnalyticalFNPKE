@@ -135,13 +135,8 @@ $$-\frac{\rho-\beta}{\Lambda^{\fbox{$\alpha$}}}\fbox{$S_{K,K}$}-\frac{1}{\Lambda
 
 All the parts that depend on the fractional order $\alpha$ have been enclosed in a box, with the purpose to show the explicit dependence of that parameter. From Eq. (25) it follows that:
 
-$$\lim_{\alpha \rightarrow 1} \underbrace{P_f (s,\alpha)} _ {\mathrm{Fractional\ case}}=\underbrace{P(s)}_{\mathrm{Integer\ case}}$$
+$$\lim_{\alpha \rightarrow 1} \underbrace{P_f (s,\alpha)} _ {\mathrm{Fractional\ case}}=\underbrace{P(s)}_{\mathrm{Integer\ case}}, \tag{26}$$
 
-
-
-It is possible to write the Polynomials as two variable functions that depend on $s$ as well as on $\alpha$:
-
-
-=S\left(\lim_{\alpha \rightarrow 1}{\Omega}\right)=S\left(\lim_{\alpha\rightarrow1}{\left\{\lambda_1^\alpha,\lambda_2^\alpha,\cdots,\lambda_n^\alpha\right\}}\right)
+where the form of the polynomial $P(s)$ can be consulted in the following [link](https://github.com/Cruz-Lopez-Carlos-Antonio/AnalyticNPKE#4-simplification-of-the-polynomials).
 
 
