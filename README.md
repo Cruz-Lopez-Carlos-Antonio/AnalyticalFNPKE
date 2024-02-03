@@ -148,4 +148,10 @@ $$=\sum_{k=0}^{\infty} \frac{z^k}{\Gamma(k+1)}=\sum_{k=0}^{\infty}\frac{z^k}{k!}
 
 where the limit has been interchanged with the series due to the absolute convergence of the Mittag-Leffler function. Combining the results given in **Section 4.1**, **Section 4.2** and in the present section, it follows that the analytic solution of the FNPKE is obtained from the analytical solution of the fractional version. This result is relevant in terms of the algorithmical implementation, because allows extending all the codes that were developed for the NPKE (which can be consulted [here](https://github.com/Cruz-Lopez-Carlos-Antonio/AnalyticNPKE#4-simplification-of-the-polynomials).
 
+## 5. Algorithmical implementation. 
+### 5.1 Requirements.
+
+The present codes require, for their execution, of the **ml.m** code developed by Garrappa (2015, 2024), which can be freely download in the following [link](https://www.mathworks.com/matlabcentral/fileexchange/48154-the-mittag-leffler-function). It is worth mentioning that the use of such code is subject to a licence that must to be consulted. 
+In order to use such code it is necessary to include it in the folder where the AnalyticFNPKE codes are saved. In the following image such procedure is showed:
+
 
