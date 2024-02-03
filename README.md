@@ -125,6 +125,8 @@ Once the equivalcente between the sums has been proved, it is possible to show t
 
 $$\lim_{\alpha\rightarrow1}{P_f(s,\alpha)}=\lim_{\alpha\rightarrow1}({s^{K+1}+\left(\fbox{$S_{1,K}$}-\frac{\rho-\beta}{\Lambda^{\fbox{$\alpha$}}}\right)s^K} + \left(\fbox{$S_{2,K}$}-\frac{\rho-\beta}{\Lambda^{\fbox{$\alpha$}}}\fbox{$S_{1,K}$}-\frac{1}{\Lambda^{\fbox{$\alpha$}}}\sum_{i=1}^{K}{\lambda_i^{\fbox{$\alpha$}}\beta_i}\right)s^{K-1}$$
 
+$$+\sum_{i=3}^{K}{\left(\fbox{$S_{i,K}$}-\frac{\rho-\beta}{\Lambda^{\fbox{$\alpha$}}}\fbox{$S_{i-1,K}$}-\frac{1}{\Lambda^{\fbox{$\alpha$}}}\sum_{j=1}^{K}{\lambda_j^{\fbox{$\alpha$}}\beta_j\fbox{$S_{i-2,K-1}^j$}}\right)s^{K+1-i}-\frac{\rho-\beta}{\Lambda^{\fbox{$\alpha$}}}\fbox{$S_{K,K}$}}$$
+
 
 It is possible to write the Polynomials as two variable functions that depend on $s$ as well as on $\alpha$:
 
