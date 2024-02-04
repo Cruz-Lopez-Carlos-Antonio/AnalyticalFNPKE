@@ -159,7 +159,8 @@ In order to use such code it is necessary to include it in the folder where the 
 
 
 ### 5.2 Sums.
-The first step consists of compute the sum given in the Eq. (18) and Eq. (22). As in the [integer case](https://github.com/Cruz-Lopez-Carlos-Antonio/AnalyticNPKE#51-sums), it is possible to include these nested sums in combinatorial terms. Firstly, it is necessary to understand Eq. (18) as the sum of combinations of $m$ elements from a total of $n$ of the set $\Omega = \set{\lambda_1^{\alpha},\lambda_2^{\alpha},\cdots,\lambda_n^{\alpha}}$
+The first step consists of compute the sum given in the Eq. (18) and Eq. (22). As in the [integer case](https://github.com/Cruz-Lopez-Carlos-Antonio/AnalyticNPKE#51-sums), it is possible to estimate these nested sums using counting techniques. Firstly, it is necessary to understand the products of Eq. (18), as combinations of $m$ elements from a total of $n$ of the set $\Omega = \set{\lambda_1^{\alpha},\lambda_2^{\alpha},\cdots,\lambda_n^{\alpha}}$
+
 ### Code 1 ###
 ```MATLAB
 %Sum with replacement
