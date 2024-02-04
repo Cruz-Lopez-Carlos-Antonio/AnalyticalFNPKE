@@ -1,4 +1,4 @@
-****# Analytical Solution of the Fractional Neutron Point Kinetic Equations. 
+# Analytical Solution of the Fractional Neutron Point Kinetic Equations. 
 The present repository contains the MATLAB codes developed to solve the Fractional Neutron Point Kinetic Equations (FNPKE). These codes were described in the article *A New Solution of the Fractional Neutron Point Kinetics Equations using Symmetry and the Heaviside’s expansion formula*, which was recently submitted to the **Progress in Nuclear Energy** journal. 
 
 The programs are licensed under a Creative Commons Attribution 4.0 International License: http://creativecommons.org/licenses/by/4.0/
