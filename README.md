@@ -157,6 +157,10 @@ In order to use such code it is necessary to include it in the folder where the 
 ![image](https://github.com/Cruz-Lopez-Carlos-Antonio/AnalyticalFNPKE/assets/139827225/c370713f-75a2-4a4a-9bba-e0dfb8885cfc)
 ### 5.2 From Python to MATLAB.
 
+Due to the symmetry and equivalence between the fractional and the integer case (when $\alpha =1$), in principle the codes that were developed for the NPKE can be used, with a slightly modifications, to solve the FNPKE. Unfortunately there is an important obstacle: the computation of the Mittag-Leffler function. 
+
+it is necessary to migrate from Python 3 to MATLAB, with the purpose to include the script proposed by Garrappa to compute the Mittag-Leffler function. 
+
 
 ### 5.2 Sums.
 The first step of the algorithmical implementation oconsists of computing the sum given in the Eq. (18) and Eq. (22). As in the [integer case](https://github.com/Cruz-Lopez-Carlos-Antonio/AnalyticNPKE#51-sums), it is possible to estimate these nested sums using counting techniques, for which the products of Eq. (18) can be understood as combinations of $m$ elements from a total of $n$ of the set $\Omega = \set{\lambda_1^{\alpha},\lambda_2^{\alpha},\cdots,\lambda_n^{\alpha}}$. Therefore it is necessary to use the following operations:
