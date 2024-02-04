@@ -158,7 +158,9 @@ In order to use such code it is necessary to include it in the folder where the 
 ### 5.2 From Python to MATLAB.
 
 Due to the symmetry and equivalence between the fractional and the integer case (when $\alpha =1$), in principle the codes that were developed for the NPKE in the Python language can be used, with a slightly modifications, to solve the FNPKE. Unfortunately there is an important obstacle that prevents that: the computation of the Mittag-Leffler function. 
-This function requires for special algorithms to be accurately computed, because its standard definition given in Eq. power series
+This function requires for special algorithms to be accurately computed, because its standard definition given in Eq. (14) in terms of power series has a very slow convergence, requiring several terms to have an adequate result.
+The main problem is related to the following term:
+$$\Gamma(k\alpha+\beta) \tag{28}$$
 
 
 it is necessary to migrate from Python 3 to MATLAB, with the purpose to include the script proposed by Garrappa to compute the Mittag-Leffler function. 
