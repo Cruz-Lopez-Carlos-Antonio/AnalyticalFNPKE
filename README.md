@@ -155,3 +155,6 @@ The present codes require, for their execution, of the **ml.m** code developed b
 In order to use such code it is necessary to include it in the folder where the AnalyticFNPKE codes are saved. In the following image such procedure is showed:
 
 ![image](https://github.com/Cruz-Lopez-Carlos-Antonio/AnalyticalFNPKE/assets/139827225/c370713f-75a2-4a4a-9bba-e0dfb8885cfc)
+
+### 5.2 Sums.
+The following code computes the sums of Eq. 
