@@ -162,9 +162,7 @@ This function requires for special algorithms to be accurately computed, because
 The main problem is related to the following term:
 $$\Gamma(k\alpha+\beta) \tag{28}$$
 
-which exhibits numerical issues for greater values of $k$, as Ortigueira et al. (2019) has pointed out. 
-it is necessary to migrate from Python 3 to MATLAB, with the purpose to include the script proposed by Garrappa to compute the Mittag-Leffler function. 
-
+which exhibits numerical issues for greater values of $k$, as Ortigueira et al. (2019) has pointed out. Therefore, it is necessary to use a more advanced method to compute such function, as the one provided by Roberto Garrappa (2015, 2024). Nevertheless, this author implements its algorithm in the MATLAB programming language, being a non-trivial task to migrate it to Python. Therefore it is necessary to change of programming language in order to include it.
 
 ### 5.2 Sums.
 The first step of the algorithmical implementation oconsists of computing the sum given in the Eq. (18) and Eq. (22). As in the [integer case](https://github.com/Cruz-Lopez-Carlos-Antonio/AnalyticNPKE#51-sums), it is possible to estimate these nested sums using counting techniques, for which the products of Eq. (18) can be understood as combinations of $m$ elements from a total of $n$ of the set $\Omega = \set{\lambda_1^{\alpha},\lambda_2^{\alpha},\cdots,\lambda_n^{\alpha}}$. Therefore it is necessary to use the following operations:
