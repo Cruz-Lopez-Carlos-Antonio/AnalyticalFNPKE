@@ -162,7 +162,7 @@ This function requires for special algorithms to be accurately computed, because
 The main problem is related to the following term:
 $$\Gamma(k\alpha+\beta) \tag{28}$$
 
-
+which exhibits numerical issues for greater values of $k$, as Ortigueira et al. (2019) has pointed out. 
 it is necessary to migrate from Python 3 to MATLAB, with the purpose to include the script proposed by Garrappa to compute the Mittag-Leffler function. 
 
 
