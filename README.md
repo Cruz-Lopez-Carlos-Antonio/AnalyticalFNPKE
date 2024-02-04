@@ -1,4 +1,4 @@
-# Analytical Solution of the Fractional Neutron Point Kinetic Equations. 
+****# Analytical Solution of the Fractional Neutron Point Kinetic Equations. 
 The present repository contains the MATLAB codes developed to solve the Fractional Neutron Point Kinetic Equations (FNPKE). These codes were described in the article *A New Solution of the Fractional Neutron Point Kinetics Equations using Symmetry and the Heaviside’s expansion formula*, which was recently submitted to the **Progress in Nuclear Energy** journal. 
 
 The programs are licensed under a Creative Commons Attribution 4.0 International License: http://creativecommons.org/licenses/by/4.0/
@@ -153,5 +153,4 @@ where the limit has been interchanged with the series due to the absolute conver
 
 The present codes require, for their execution, of the **ml.m** code developed by Garrappa (2015, 2024), which can be freely download in the following [link](https://www.mathworks.com/matlabcentral/fileexchange/48154-the-mittag-leffler-function). It is worth mentioning that the use of such code is subject to a licence that must to be consulted. 
 In order to use such code it is necessary to include it in the folder where the AnalyticFNPKE codes are saved. In the following image such procedure is showed:
-![image]([https://github.com/Cruz-Lopez-Carlos-Antonio/AnalyticNPKE/blob/main/Imagen%201.jpg](https://github.com/Cruz-Lopez-Carlos-Antonio/AnalyticalFNPKE/blob/main/Diagram%20Installation.jpg)https://github.com/Cruz-Lopez-Carlos-Antonio/AnalyticalFNPKE/blob/main/Diagram%20Installation.jpg)
-
+![image]([https://github.com/Cruz-Lopez-Carlos-Antonio/AnalyticNPKE/blob/main/Imagen%201.jpg]
