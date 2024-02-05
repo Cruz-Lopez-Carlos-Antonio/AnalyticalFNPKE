@@ -182,3 +182,16 @@ S1 = sum(Vec);
 end
 ```
 ### 5.4 Shifted sums
+As it was shown in Eq. (23), the sum $S_{m,n}^i$ can be computed with the same algorithm used for the sum without restriction given by $S_{m,n}$. It is only necessary to remove the term that corresponds to the $i-$ position. The following MATLAB function carries out these operations:
+
+### Code 2 ###
+```MATLAB
+%Sum with replacement
+function S1i = Sumai(i,m,L)
+COPY = L;
+COPY(i)=[];
+S1i=Suma(m,COPY);
+end
+```
+> [!IMPORTANT]
+> The **Code 2** depends on the **Code 1**, and therefore it must to appear before this last one. 
