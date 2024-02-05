@@ -199,4 +199,4 @@ end
 ### 5.5 Polynomials.
 ### 5.5.1 Poly_Coeff
 The function **Poly_Coeff** computes the coefficients of the $P_f(s)$ polynomial given in Eq. (15). It admits the following arguments:
-1. A vector L_f that contains the lambda constants with the $\alpha$ power, L_f=[$\lambda_1^\alpha,\lambda_2^\alpha,\cdots,\lambda_n^\alpha$]
+1. A vector L_f that contains the lambda constants with the $\alpha$ power, L_f=($\lambda_1^\alpha,\lambda_2^\alpha,\cdots,\lambda_n^\alpha$)
