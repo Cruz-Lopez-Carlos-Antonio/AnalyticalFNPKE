@@ -199,10 +199,10 @@ end
 ### 5.5 Polynomials.
 ### 5.5.1 Poly_Coeff
 The function **Poly_Coeff** computes the coefficients of the $P_f(s)$ polynomial given in Eq. (15). It returns a vector with real numbers and admits the following arguments:
-1. A vector L_f that contains the lambda constants with the $\alpha$ power, L_f=($\lambda_1^\alpha,\lambda_2^\alpha,\cdots,\lambda_n^\alpha$)
-2. A parameter LAM_f whose value is the same that $\Lambda^\alpha$.
+1. A vector **L_f** that contains the lambda constants with the $\alpha$ power, **L_f**=($\lambda_1^\alpha,\lambda_2^\alpha,\cdots,\lambda_n^\alpha$)
+2. A parameter **LAM_f** whose value is the same that $\Lambda^\alpha$.
 3. The reactivity, denoted by the variable $\rho$.
-4. A vector Betas that contains the fractions of the precursors of the delayed neutrons, given by Betas =($\beta_1,\beta_2,\cdots,\beta_n$)
+4. A vector called **Betas** that contains the fractions of the precursors of the delayed neutrons, given by Betas =($\beta_1,\beta_2,\cdots,\beta_n$)
 The following code contains the **Poly_coeff** function:
 ```MATLAB
 function P1 = Poly_Coeff(L_f,LAM_f,rho,Betas)
