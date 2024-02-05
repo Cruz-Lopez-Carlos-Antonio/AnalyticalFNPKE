@@ -244,6 +244,7 @@ end
 ### 5.5.3 Poly_Coeff_H
 The function **Poly_Coeff_H** returns the coefficients of the polynomial $H_f(s)$ given in Eq. (16). It function requires the same input arguments that the polynomial **Poly_Coeff**, but in addition it needs a vector, denoted by C_0, whose content are the initial conditions of the precursors of the delayed neutrons. 
 The following code implements the **Poly_Coeff_H**
+### Code 5 ###
 ```MATLAB
 function H1 = Poly_Coeff_H(L_f,LAM_f,rho,Betas,C0)
 C_H = [ ];      
