@@ -241,4 +241,7 @@ P(1:size(P,2)-1);
 P_d(1:size(P,2)-1)=P(1:size(P,2)-1).*exp;
 end
 ```
+### 5.5.3 Poly_Coeff_H
+The function **Poly_Coeff_H** returns the coefficients of the polynomial $H_f(s)$ given in Eq. (16). It function requires the same input arguments that the polynomial **Poly_Coeff**, but in addition it needs a vector, denoted by C_0, whose contain are the initial conditions of the precursors of the delayed neutrons. 
+The following code implements the **Poly_Coeff_H**
 
