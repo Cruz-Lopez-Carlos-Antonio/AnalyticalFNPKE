@@ -204,6 +204,7 @@ The function **Poly_Coeff** computes the coefficients of the $P_f(s)$ polynomial
 3. The reactivity, denoted by the variable $\rho$.
 4. A vector called **Betas** that contains the fractions of the precursors of the delayed neutrons, given by Betas =($\beta_1,\beta_2,\cdots,\beta_n$)
 The following code contains the **Poly_coeff** function:
+### Code 3 ###
 ```MATLAB
 function P1 = Poly_Coeff(L_f,LAM_f,rho,Betas)
 C_P = [ ];
@@ -232,3 +233,4 @@ The function **Poly_coeff_d** builds the coefficients of the derivative of the p
 $$ \frac{dP_f}{ds}= \sum_{k=1}^{K}c_k ks^{k-1}, \tag{29}$$ 
 
 where $c_k$ are the coefficients of the polynomial $P_f(s)$.The following code implements the Eq. (29) and returns a vector with the coefficients of $\frac{dP_f}{ds}$.
+### Code 4 ###
