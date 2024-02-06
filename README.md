@@ -298,7 +298,7 @@ with $\beta=0.0075$ and $\Lambda=0.0005 \mathrm{s}$. A negative reactivity given
 
 ### Input:
 
-<details><summary>CLICK HERE to expand the input of the application of the AnalyticFPKE_Insertion.py</summary>
+<details><summary>CLICK HERE to expand the input of the application of the AnalyticFPKE_Insertion.m</summary>
 <p>
 
 ```MATLAB
