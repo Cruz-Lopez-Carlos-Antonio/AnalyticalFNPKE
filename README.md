@@ -281,7 +281,19 @@ The code **AnalyticFNPKE_Insertion.m** that is provided in the repository, solve
 ## 6.1 Verification of the AnalyticFNPKE-Insertion.m
 A first step in the development of the codes consists of reproducing the integer case for $\alpha=1$. In other words, the fractional model must to reproduce the data obtained with the integer code [AnalyticNPKE-Insertion.py](https://github.com/Cruz-Lopez-Carlos-Antonio/AnalyticNPKE#6-analyticnpke-insertionpy). Therefore we will use the following initial conditions:
 
-$$ n (0) =1  \ \ \ \ C_i(0)=\frac{\beta_i n_0}{\lambda_i^\alpha \Lambda^\alpha} \tag{30} $$
+$$ n (0) =1  \ \ \ \ C_i(0)=\frac{\beta_i n_0}{\lambda_i^\alpha \Lambda^\alpha}, \tag{30} $$
 
+whose justification is provided in the submitter paper. Similarly, the following data will be used:
+
+|Nuclear parameter | Value  ($\mathrm{s^{-1}}$)| Nuclear parameter | Value           |
+| ------------- | ------------- | -------------     | --------------  |
+| $\lambda_1$   |0.0127         | $\beta_1$         |0.000285         |
+| $\lambda_2$   |0.0317         | $\beta_2$         |0.0015975        |
+| $\lambda_3$   |0.115          | $\beta_3$         |0.00141          |
+| $\lambda_4$   |0.311          | $\beta_4$         |0.0030525        |
+| $\lambda_5$   |1.40           | $\beta_5$         |0.00096          |
+| $\lambda_6$   |3.87           | $\beta_6$         |0.000195         |
+
+and $\beta=0.0075$ and $\Lambda=0.0005 \mathrm{s}$. A negative reactivity given by $\rho=-1$ dollar will be used as well as a time of $t=10$ seconds. The following part of the code is considered as the "Input" section. 
 
 
