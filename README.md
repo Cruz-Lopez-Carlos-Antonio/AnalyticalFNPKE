@@ -281,7 +281,7 @@ The code **AnalyticFNPKE_Insertion.m** that is provided in the repository, solve
 ## 6.1 Verification of the AnalyticFNPKE-Insertion.m
 A first step in the development of the codes consists of reproducing the integer case for $\alpha=1$. In other words, the fractional model must to reproduce the data obtained with the integer code [AnalyticNPKE-Insertion.py](https://github.com/Cruz-Lopez-Carlos-Antonio/AnalyticNPKE#6-analyticnpke-insertionpy). Therefore we will use the following initial conditions:
 
-$$ n(0)=1 , $$
+$$ n_0=1 $$
 
  C_i(0)=\frac{\beta_i n_0}{\lambda_i^\alpha \Lambda^\alpha} \tag{30}
 
