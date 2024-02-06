@@ -294,6 +294,50 @@ whose justification is provided in the submitter paper. Similarly, the following
 | $\lambda_5$   |1.40           | $\beta_5$         |0.00096          |
 | $\lambda_6$   |3.87           | $\beta_6$         |0.000195         |
 
-and $\beta=0.0075$ and $\Lambda=0.0005 \mathrm{s}$. A negative reactivity given by $\rho=-1$ dollar will be used as well as a time of $t=10$ seconds. The following part of the code is considered as the "Input" section. 
+with $\beta=0.0075$ and $\Lambda=0.0005 \mathrm{s}$. A negative reactivity given by $\rho=-1$ dollar will be used as well as a time of $t=10$ seconds. The following part of the code is considered as the "Input" section. 
 
+### Input:
+
+<details><summary>CLICK HERE to expand the input of the application of the AnalyticNPKE-Insertion.py</summary>
+<p>
+
+
+```MATLAB
+%*******************************************************************
+%************************** Input **********************************
+
+%fractional order
+alpha_f = 1;
+
+%Vector with the standard decay lambda constants of the precursors
+L=[0.0127 0.0317 0.115 0.311 1.4 3.87];
+
+%Betas
+Betas =[0.000285,0.0015975,0.00141,0.0030525,0.00096,0.000195];
+
+%reactivity
+rho = -0.0075
+
+%Lambda_U
+Lambda_U=0.0005;
+
+% These lines do not need to be modified.
+%Beta total, lambda^alpha, Lambda_U^alpha
+L_f = L.^alpha_f;
+LAM_f = Lambda_U^alpha_f;
+
+%Initial conditions
+n0 = 1;
+C0 = (n0/LAM_f)*Betas./L_f
+
+% The step variable is used for large times, with the purpose of
+% avoiding possible numerical issues with the Mittag-Leffler. 
+% For small values (of the order of 10 seconds), Target can be equal
+% to the time step.
+
+Target = 10
+step = 10
+```
+</p>
+</details>
 
