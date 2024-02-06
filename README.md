@@ -272,4 +272,10 @@ end
 Q1=C_Q;
 end
 ```
+## 6. AnalyticFNPKE_Insertion.m
+The code **AnalyticFNPKE_Insertion.m** that is provided in the repository, solves the system given in Eq. (1) and Eq. (2), considering a constant reactivity and including the codes that were discussed before. 
+
+>[!WARNING]
+> The AnalyticFNPKE-Insertion.py code only can be used for cases with constant reactivities. For linear-time reactivities see the AnalyticFNPKE-Ramp.py code.
+
 
