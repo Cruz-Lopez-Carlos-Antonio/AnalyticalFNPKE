@@ -259,4 +259,17 @@ end
 H1 = C_H;
 end
 ```
+### 5.5.4 Poly_Coeff_Q
+The function **Poly_Coeff_Q** computes the coefficients of the Polynomial $Q_f(s)$ given in the Eq. (17). This polynomial only requires the vector **L_f** as input. The following code implement this function the MATLAB programming language:
+### Code 6 ###
+```MATLAB
+function Q1 = Poly_Coeff_Q(L_f)
+C_Q = [ ];
+C_Q(1)=1;
+for j=1:size(L_f,2)
+    C_Q(j+1)=Suma(j,L_f);
+end
+Q1=C_Q;
+end
+```
 
