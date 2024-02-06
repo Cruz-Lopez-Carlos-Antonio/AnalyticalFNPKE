@@ -172,7 +172,7 @@ The first step of the algorithmical implementation oconsists of computing the su
 
 The following code includes the last instructions:
 
-### Code 1 ###
+### Code #1 ###
 ```MATLAB
 %Sum with replacement
 function S1 = Suma(m,L)
@@ -184,7 +184,7 @@ end
 ### 5.4 Shifted sums
 As it was shown in Eq. (23), the sum $S_{m,n}^i$ can be computed with the same algorithm used for the sum without restriction given by $S_{m,n}$. It is only necessary to remove the term that corresponds to the $i-$ position. The following MATLAB function carries out these operations:
 
-### Code 2 ###
+### Code #2 ###
 ```MATLAB
 %Sum with replacement
 function S1i = Sumai(i,m,L)
@@ -204,7 +204,7 @@ The function **Poly_Coeff** computes the coefficients of the $P_f(s)$ polynomial
 3. The reactivity, denoted by the variable $\rho$.
 4. A vector called **Betas** that contains the fractions of the precursors of the delayed neutrons, given by Betas =($\beta_1,\beta_2,\cdots,\beta_n$)
 The following code contains the **Poly_coeff** function:
-### Code 3 ###
+### Code #3 ###
 ```MATLAB
 function P1 = Poly_Coeff(L_f,LAM_f,rho,Betas)
 C_P = [ ];
@@ -233,7 +233,7 @@ The function **Poly_coeff_d** builds the coefficients of the derivative of the p
 $$ \frac{dP_f(s)}{ds}= \sum_{k=1}^{K}c_k ks^{k-1}, \tag{29}$$ 
 
 where $c_k$ are the coefficients of the polynomial $P_f(s)$.The following code implements the Eq. (29) and returns a vector with the coefficients of $\frac{dP_f}{ds}$.
-### Code 4 ###
+### Code #4 ###
 ```MATLAB
 function P_d = Poly_Coeff_d(P)
 exp = size(P,2)-1:-1:1;
@@ -244,7 +244,7 @@ end
 ### 5.5.3 Poly_Coeff_H
 The function **Poly_Coeff_H** returns the coefficients of the polynomial $H_f(s)$ given in Eq. (16). It function requires the same input arguments that the polynomial **Poly_Coeff**, but in addition it needs a vector, denoted by C_0, whose content are the initial conditions of the precursors of the delayed neutrons. 
 The following code implements the **Poly_Coeff_H**
-### Code 5 ###
+### Code #5 ###
 ```MATLAB
 function H1 = Poly_Coeff_H(L_f,LAM_f,rho,Betas,C0)
 C_H = [ ];      
@@ -261,7 +261,7 @@ end
 ```
 ### 5.5.4 Poly_Coeff_Q
 The function **Poly_Coeff_Q** computes the coefficients of the Polynomial $Q_f(s)$ given in the Eq. (17). This polynomial only requires the vector **L_f** as input. The following code implement this function the MATLAB programming language:
-### Code 6 ###
+### Code #6 ###
 ```MATLAB
 function Q1 = Poly_Coeff_Q(L_f)
 C_Q = [ ];
