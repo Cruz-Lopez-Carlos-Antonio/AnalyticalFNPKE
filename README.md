@@ -408,12 +408,20 @@ The code **AnalyticFNPKE_ramp.m** implements the last methodology using an itera
 > In a strictly sense we are approximating the solution for the non-constant reactivity, which mainly depend on the size of the small step. In fact, the smaller it is the better approximation. We suggest using $h=0.0001$, which guarantees
 > 
 ### 7.1 Verification of the AnalyticFNPKE_Ramp.m
-As in the previous case, the first example of application will consists of reproducing the integer's solution assuming that $\alpha=1$. A time step of $h=0.0001 \mathrm{s}$ will be used with the purpose to have an accuracy of at least seven digits, comparing with the data reported by Hamada (2018, p. 7). The following table contains the values of the decay constants as well as the fractions betas. 
+As in the previous case, the first example of application will consists of reproducing the integer's solution assuming that $\alpha=1$. A time step of $h=0.0001 \mathrm{s}$ will be used with the purpose to have an accuracy of at least seven digits, comparing with the data reported by Hamada (2018, p. 7). The following table contains the values of the decay constants as well as the fractions betas:
 
-The initial conditions are the same that in the previous case and the reactivity is given by:
-$$\rho(t)=0.1\beta, \tag{2}$$
+|Nuclear parameter | Value  ($\mathrm{s^{-1}}$)| Nuclear parameter | Value           |
+| ------------- | ------------- | -------------     | --------------  |
+| $\lambda_1$   |0.0127         | $\beta_1$         |0.000266         |
+| $\lambda_2$   |0.0317         | $\beta_2$         |0.001491         |
+| $\lambda_3$   |0.115          | $\beta_3$         |0.001316         |
+| $\lambda_4$   |0.311          | $\beta_4$         |0.002849         |
+| $\lambda_5$   |1.40           | $\beta_5$         |0.000896         |
+| $\lambda_6$   |3.87           | $\beta_6$         |0.000182         |
 
-The following lines contains the data of the decay constants as well as t
+
+The initial conditions are the same that in the previous case, $\beta=0.007$ and $\Lambda= 0.00002 \mathrm{s}$ and the reactivity is given by:
+$$\rho(t)=0.1\beta t, \tag{32}$$
 
 ### Input
 
