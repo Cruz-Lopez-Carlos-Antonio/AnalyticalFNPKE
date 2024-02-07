@@ -20,7 +20,7 @@ The authors appreciate the financial support received from the Consejo Nacional 
 1. [Laplace transform of the system.](https://github.com/Cruz-Lopez-Carlos-Antonio/AnalyticalFNPKE#2-laplace-transform-of-the-system)
 1. [Analytical solution and Polynomials.](https://github.com/Cruz-Lopez-Carlos-Antonio/AnalyticalFNPKE#3-analytical-solution-and-polynomials)
 1. [Equivalence between the integer's solution and the fractional one.](https://github.com/Cruz-Lopez-Carlos-Antonio/AnalyticalFNPKE/blob/main/README.md#4equivalence-between-the-integers-solution-and-the-fractional-one)
-   - [4.1 Equivalence between the sums.]([https://github.com/Cruz-Lopez-Carlos-Antonio/AnalyticalFNPKE/blob/main/README.md#4equivalence-between-the-integers-solution-and-the-fractional-one](https://github.com/Cruz-Lopez-Carlos-Antonio/AnalyticalFNPKE/blob/main/README.md#41-equivalence-between-the-sums)
+   - [4.1 Equivalence between the sums.](https://github.com/Cruz-Lopez-Carlos-Antonio/AnalyticalFNPKE/blob/main/README.md#41-equivalence-between-the-sums)
    - [ 4.2 Equivalence between the Polynomials.](https://github.com/Cruz-Lopez-Carlos-Antonio/AnalyticalFNPKE/blob/main/README.md#42-equivalence-between-the-polynomials)
    - [ 4.3 Equivalence between the Mittag-Leffler function and the exponential one.](https://github.com/Cruz-Lopez-Carlos-Antonio/AnalyticalFNPKE#43-equivalence-between-the-mittag-leffler-function-and-the-exponential-one)
 3. [Algorithmical Implementation.](https://github.com/Cruz-Lopez-Carlos-Antonio/AnalyticalFNPKE#5-algorithmical-implementation)
