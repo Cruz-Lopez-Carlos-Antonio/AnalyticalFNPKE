@@ -15,6 +15,26 @@ This last file can be freely download from the mathworks site in the following [
 ## Financial Support.
 The authors appreciate the financial support received from the Consejo Nacional de Humanidades, Ciencia y Tecnología (CONAHCYT), under the program *Estancias Posdoctorales por México, 2022*, with the project entitled: *Desarrollo de modelos fenomenológicos energéticos de orden fraccional, para la optimización y simulación en reactores nucleares de potencia*, by which the present development was possible.
 
+## Index of the Repository
+1. [Mathematical description of the problem](https://github.com/Cruz-Lopez-Carlos-Antonio/AnalyticalFNPKE#1-mathematical-description-of-the-problem)).
+1. [Laplace transform of the system](https://github.com/Cruz-Lopez-Carlos-Antonio/AnalyticalFNPKE#2-laplace-transform-of-the-system)
+1. [Analytical solutions and Polynomials](https://github.com/Cruz-Lopez-Carlos-Antonio/AnalyticalFNPKE#3-analytical-solution-and-polynomials)
+1. [Simplification of the Polynomials](https://github.com/Cruz-Lopez-Carlos-Antonio/AnalyticNPKE?tab=readme-ov-file#4-simplification-of-the-polynomials).
+2. [Algorithmical Implementation](https://github.com/Cruz-Lopez-Carlos-Antonio/AnalyticNPKE?tab=readme-ov-file#5-algorithmical-implementation).
+   - [5.1 Sums](https://github.com/Cruz-Lopez-Carlos-Antonio/AnalyticNPKE?tab=readme-ov-file#51-sums)
+   - [5.2 Shifted sums](https://github.com/Cruz-Lopez-Carlos-Antonio/AnalyticNPKE/blob/main/README.md#52-shifted-sums)
+   - [5.3 Polynomials](https://github.com/Cruz-Lopez-Carlos-Antonio/AnalyticNPKE/blob/main/README.md#53-polynomials)
+     - [5.3.1 Codes that compute the polynomials coefficients.](https://github.com/Cruz-Lopez-Carlos-Antonio/AnalyticNPKE/blob/main/README.md#531-codes-that-compute-the-polynomials-coefficients)
+   - [5.4 Evaluation of Polynomials](https://github.com/Cruz-Lopez-Carlos-Antonio/AnalyticNPKE/blob/main/README.md#54-evaluation-of-the-polynomials)
+   - [5.5 Flow diagram of the codes](https://github.com/Cruz-Lopez-Carlos-Antonio/AnalyticNPKE#55-flow-diagram-of-the-python-codes)
+1. [AnalyticNPKE-Insertion.py](https://github.com/Cruz-Lopez-Carlos-Antonio/AnalyticNPKE#6-analyticnpke-insertionpy)
+   - [6.1 Example of an application of the AnalayticNPKE-Insertion.py](https://github.com/Cruz-Lopez-Carlos-Antonio/AnalyticNPKE#61-application)
+1. [AnalyticNPKE-Ramp.py](https://github.com/Cruz-Lopez-Carlos-Antonio/AnalyticNPKE#7-analyticnpke-ramppy)
+   - [7.1 Example of an application of the AnalyticNPKE-Ramp.py](https://github.com/Cruz-Lopez-Carlos-Antonio/AnalyticNPKE#71-application)
+1. [AnalyticNPKE-Feedback.py](https://github.com/Cruz-Lopez-Carlos-Antonio/AnalyticNPKE#8-analyticnpke-feedbackpy)
+   - [8.1 Example of an Application of the AnalyticNPKE-Feedback.py](https://github.com/Cruz-Lopez-Carlos-Antonio/AnalyticNPKE#81-example-of-an-application-of-the-analyticnpke-feedbackpy)
+1. [References](https://github.com/Cruz-Lopez-Carlos-Antonio/AnalyticNPKE?tab=readme-ov-file#9-references)
+
 ## 1. Mathematical description of the problem
 Following the ideas of Ray and Patra (2014), a compartmental version of the The Fractional Neutron Point Kinetic Equations (FNPKE), with $K$ groups of precursors of delayed neutrons, can be written as follows:
 
