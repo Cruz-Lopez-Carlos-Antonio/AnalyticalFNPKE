@@ -19,7 +19,7 @@ The authors appreciate the financial support received from the Consejo Nacional 
 1. [Mathematical description of the problem.](https://github.com/Cruz-Lopez-Carlos-Antonio/AnalyticalFNPKE#1-mathematical-description-of-the-problem).
 1. [Laplace transform of the system.](https://github.com/Cruz-Lopez-Carlos-Antonio/AnalyticalFNPKE#2-laplace-transform-of-the-system)
 1. [Analytical solution and Polynomials.](https://github.com/Cruz-Lopez-Carlos-Antonio/AnalyticalFNPKE#3-analytical-solution-and-polynomials)
-1. [Simplification of the Polynomials.](https://github.com/Cruz-Lopez-Carlos-Antonio/AnalyticalFNPKE/blob/main/README.md#4equivalence-between-the-integers-solution-and-the-fractional-one)
+1. [Equivalence between the integer's solution and the fractional one.](https://github.com/Cruz-Lopez-Carlos-Antonio/AnalyticalFNPKE/blob/main/README.md#4equivalence-between-the-integers-solution-and-the-fractional-one)
    - [4.1 Equivalence between the sums](https://github.com/Cruz-Lopez-Carlos-Antonio/AnalyticalFNPKE/blob/main/README.md#4equivalence-between-the-integers-solution-and-the-fractional-one)
 3. [Algorithmical Implementation](https://github.com/Cruz-Lopez-Carlos-Antonio/AnalyticNPKE?tab=readme-ov-file#5-algorithmical-implementation).
    - [5.1 Sums](https://github.com/Cruz-Lopez-Carlos-Antonio/AnalyticNPKE?tab=readme-ov-file#51-sums)
