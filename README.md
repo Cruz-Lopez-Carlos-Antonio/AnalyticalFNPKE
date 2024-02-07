@@ -30,7 +30,8 @@ The authors appreciate the financial support received from the Consejo Nacional 
    - [5.4 Shifted sums.](https://github.com/Cruz-Lopez-Carlos-Antonio/AnalyticalFNPKE#54-shifted-sums)
    - [5.5 Polynomials.](https://github.com/Cruz-Lopez-Carlos-Antonio/AnalyticalFNPKE#55-polynomials)
 1. [AnalyticFNPKE_Insertion.m](https://github.com/Cruz-Lopez-Carlos-Antonio/AnalyticalFNPKE#6-analyticfnpke_insertionm)
-   - [6.1 Verification of the AnalyticFNPKE_Insertion.m](https://github.com/Cruz-Lopez-Carlos-Antonio/AnalyticalFNPKE#61-verification-of-the-analyticfnpke-insertionm)
+   - [6.1 Verification of the AnalyticFNPKE_Insertion.m](https://github.com/Cruz-Lopez-Carlos-Antonio/AnalyticalFNPKE#61-verification-of-the-analyticfnpke-insertion.m)
+   - [6.2 Example of a calculation with the AnalyticFNPKE_Insertion.m](https://github.com/Cruz-Lopez-Carlos-Antonio/AnalyticalFNPKE#62-calculations-for-the-fractional-order-alpha--09)
    
 
 ## 1. Mathematical description of the problem
