@@ -383,6 +383,19 @@ As a second example we will solve the previous case, but considering a fractiona
 %fractional order
 alpha_f = 0.9;
 ```
+The corresponding output is the following:
+### Output
+```MATLAB
+Columns 1 through 6
+
+                        10         0.245804709487946          12.2037243895045          26.4909471904817          4.96488165211542          2.88018630226583
+
+  Columns 7 through 8
+
+         0.175643889648127         0.013646526326084
+```
+We can observe that the neutron density obtained with the fractional order is greater than the integer case. Nevertheless, it is possible to observe that the concentration of the precursors of the delayed neutrons is lower in each case. This can be explained by the fractional lambda constants $\lambda_i$, which have a lower value than the integer case, and therefore they are decaying in slower way. 
+
 
 
 
