@@ -340,3 +340,7 @@ step = 10
 </p>
 </details>
 
+> [!WARNING]  
+> The input contains two different variables for the time: Target and step. This last is due to numerical issues that the Mittag-Leffler can face for very large times. Therefore, we suggest to consider that these variables have the same value for times lower than 10s. Nevertheless for greater times we suggest to use a time step, which will provide a more efficient implementation.
+
+
