@@ -298,7 +298,7 @@ The code **AnalyticFNPKE_Insertion.m** that is provided in the repository, solve
 >[!WARNING]
 > The AnalyticFNPKE-Insertion.py code only can be used for cases with constant reactivities. For linear-time reactivities see the AnalyticFNPKE-Ramp.py code.
 
-### 6.1 Verification of the AnalyticFNPKE-Insertion.m
+### 6.1 Verification of the AnalyticFNPKE_Insertion.m
 A first step in the development of the codes consists of reproducing the integer case for $\alpha=1$. In other words, the fractional model must to reproduce the data obtained with the integer code [AnalyticNPKE-Insertion.py](https://github.com/Cruz-Lopez-Carlos-Antonio/AnalyticNPKE#6-analyticnpke-insertionpy). Therefore we will use the following initial conditions:
 
 $$ n (0) =1  \ \ \ \ C_i(0)=\frac{\beta_i n_0}{\lambda_i^\alpha \Lambda^\alpha}, \tag{30} $$
@@ -405,5 +405,11 @@ $$\bar{\rho}=\frac{\ \rho\left(t_n\right)+\rho(t_{n-1})}{2}. \tag{31}$$
 
 The code **AnalyticFNPKE_ramp.m** implements the last methodology using an iterative process and applying the **AnalyticFNPKE_insertion.m** in each step. 
 > [!IMPORTANT]  
-> In a strictly sense we are approximating the solution for the non-constant reactivity, which mainly depend on the size of the small step. In fact, the smaller it is the better approximation. We suggest using $h=0.0001$, which guarantees 
+> In a strictly sense we are approximating the solution for the non-constant reactivity, which mainly depend on the size of the small step. In fact, the smaller it is the better approximation. We suggest using $h=0.0001$, which guarantees
+> 
+### 7.1 Verification of the AnalyticFNPKE_Ramp.m
+As in the previous case, the first example of application will consists of reproducing the integer's solution assuming that $\alpha=1$. A time step of $h=0.0001 \mathrm{s}$ will be used with the purpose to have an accuracy of at least seven digits, comparing with the data reported by Hamada (2018, p. 7). The following lines contains the input of this application:
+
+### Input
+
 
