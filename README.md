@@ -396,6 +396,8 @@ Columns 1 through 6
 ```
 We can observe that the neutron density obtained with the fractional order is greater than the integer case. Nevertheless, it is possible to observe that the concentration of the precursors of the delayed neutrons is lower in each case. This can be explained by the fractional lambda constants $\lambda_i$, which have a lower value than the integer case, and therefore they are decaying in slower way. 
 
+## 7. AnalyticFNPKE_Ramp.m
+As it can be explained in the repository for the [integer case](https://github.com/Cruz-Lopez-Carlos-Antonio/AnalyticNPKE#7-analyticnpke-ramppy), it is possible to use the developed solution for non-constants reactivities, dividing the time in subintervals and updating the initial conditions and the reactivity in each step. This last parameter can be estimated as follows:
 
 
 
