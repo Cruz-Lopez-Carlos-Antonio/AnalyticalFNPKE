@@ -399,5 +399,9 @@ We can observe that the neutron density obtained with the fractional order is gr
 ## 7. AnalyticFNPKE_Ramp.m
 As it can be explained in the repository for the [integer case](https://github.com/Cruz-Lopez-Carlos-Antonio/AnalyticNPKE#7-analyticnpke-ramppy), it is possible to use the developed solution for non-constants reactivities, dividing the time in subintervals and updating the initial conditions and the reactivity in each step. This last parameter can be estimated as follows:
 
+$$\bar{\rho}=\frac{\ \rho\left(t_n\right)+\rho(t_{n-1})}{2}. \tag{31}$$
 
+The code **AnalyticFNPKE_ramp.m** implements the last methodology using an iterative process and applying the **AnalyticFNPKE_insertion.m** in each step. 
+> [!IMPORTANT]  
+> In a strictly sense we are approximating the solution for the non-constant reactivity, which mainly depend on the size of the small step. In fact, the smaller it is the better approximation. We suggest using $h=0.0001$, which guarantees 
 
