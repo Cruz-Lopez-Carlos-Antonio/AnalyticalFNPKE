@@ -183,7 +183,7 @@ for m=1:Target/h
     n0 = n_f;
     C0=C_f;
     m
-    Vec_sol=[Vec_sol;t*m n_f C0(2)];
+    Vec_sol=[Vec_sol;t*m n_f C0];
 end
 n0;
 rho
