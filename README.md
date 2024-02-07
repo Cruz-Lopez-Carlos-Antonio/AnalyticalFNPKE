@@ -408,7 +408,12 @@ The code **AnalyticFNPKE_ramp.m** implements the last methodology using an itera
 > In a strictly sense we are approximating the solution for the non-constant reactivity, which mainly depend on the size of the small step. In fact, the smaller it is the better approximation. We suggest using $h=0.0001$, which guarantees
 > 
 ### 7.1 Verification of the AnalyticFNPKE_Ramp.m
-As in the previous case, the first example of application will consists of reproducing the integer's solution assuming that $\alpha=1$. A time step of $h=0.0001 \mathrm{s}$ will be used with the purpose to have an accuracy of at least seven digits, comparing with the data reported by Hamada (2018, p. 7). The following lines contains the input of this application:
+As in the previous case, the first example of application will consists of reproducing the integer's solution assuming that $\alpha=1$. A time step of $h=0.0001 \mathrm{s}$ will be used with the purpose to have an accuracy of at least seven digits, comparing with the data reported by Hamada (2018, p. 7). The following table contains the values of the decay constants as well as the fractions betas. 
+
+The initial conditions are the same that in the previous case and the reactivity is given by:
+$$\rho(t)=0.1\beta, \tag{2}$$
+
+The following lines contains the data of the decay constants as well as t
 
 ### Input
 
