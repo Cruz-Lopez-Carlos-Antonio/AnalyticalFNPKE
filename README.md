@@ -16,14 +16,14 @@ This last file can be freely download from the mathworks site in the following [
 The authors appreciate the financial support received from the Consejo Nacional de Humanidades, Ciencia y Tecnología (CONAHCYT), under the program *Estancias Posdoctorales por México, 2022*, with the project entitled: *Desarrollo de modelos fenomenológicos energéticos de orden fraccional, para la optimización y simulación en reactores nucleares de potencia*, by which the present development was possible.
 
 ## Index of the Repository
-1. [Mathematical description of the problem.](https://github.com/Cruz-Lopez-Carlos-Antonio/AnalyticalFNPKE#1-mathematical-description-of-the-problem).
+1. [Mathematical description of the problem.](https://github.com/Cruz-Lopez-Carlos-Antonio/AnalyticalFNPKE#1-mathematical-description-of-the-problem)
 1. [Laplace transform of the system.](https://github.com/Cruz-Lopez-Carlos-Antonio/AnalyticalFNPKE#2-laplace-transform-of-the-system)
 1. [Analytical solution and Polynomials.](https://github.com/Cruz-Lopez-Carlos-Antonio/AnalyticalFNPKE#3-analytical-solution-and-polynomials)
 1. [Equivalence between the integer's solution and the fractional one.](https://github.com/Cruz-Lopez-Carlos-Antonio/AnalyticalFNPKE/blob/main/README.md#4equivalence-between-the-integers-solution-and-the-fractional-one)
-   - [4.1 Equivalence between the sums](https://github.com/Cruz-Lopez-Carlos-Antonio/AnalyticalFNPKE/blob/main/README.md#4equivalence-between-the-integers-solution-and-the-fractional-one)
+   - [4.1 Equivalence between the sums.](https://github.com/Cruz-Lopez-Carlos-Antonio/AnalyticalFNPKE/blob/main/README.md#4equivalence-between-the-integers-solution-and-the-fractional-one)
    - [ 4.2 Equivalence between the Polynomials.](https://github.com/Cruz-Lopez-Carlos-Antonio/AnalyticalFNPKE/blob/main/README.md#42-equivalence-between-the-polynomials)
    - [ 4.3 Equivalence between the Mittag-Leffler function and the exponential one.](https://github.com/Cruz-Lopez-Carlos-Antonio/AnalyticalFNPKE#43-equivalence-between-the-mittag-leffler-function-and-the-exponential-one)
-3. [Algorithmical Implementation.](https://github.com/Cruz-Lopez-Carlos-Antonio/AnalyticalFNPKE#5-algorithmical-implementation).
+3. [Algorithmical Implementation.](https://github.com/Cruz-Lopez-Carlos-Antonio/AnalyticalFNPKE#5-algorithmical-implementation)
    - [5.1 Requeriments.](https://github.com/Cruz-Lopez-Carlos-Antonio/AnalyticalFNPKE#51-requirements)
    - [5.2 From Python to MATLAB.](https://github.com/Cruz-Lopez-Carlos-Antonio/AnalyticalFNPKE#52-from-python-to-matlab)
    - [5.3 Sums.](https://github.com/Cruz-Lopez-Carlos-Antonio/AnalyticalFNPKE#53-sums)
@@ -31,11 +31,7 @@ The authors appreciate the financial support received from the Consejo Nacional 
    - [5.5 Polynomials.](https://github.com/Cruz-Lopez-Carlos-Antonio/AnalyticalFNPKE#55-polynomials)
 1. [AnalyticFNPKE_Insertion.m](https://github.com/Cruz-Lopez-Carlos-Antonio/AnalyticalFNPKE#6-analyticfnpke_insertionm)
    - [6.1 Verification of the AnalyticFNPKE_Insertion.m](https://github.com/Cruz-Lopez-Carlos-Antonio/AnalyticalFNPKE#61-verification-of-the-analyticfnpke-insertionm)
-1. [AnalyticNPKE-Ramp.py](https://github.com/Cruz-Lopez-Carlos-Antonio/AnalyticNPKE#7-analyticnpke-ramppy)
-   - [7.1 Example of an application of the AnalyticNPKE-Ramp.py](https://github.com/Cruz-Lopez-Carlos-Antonio/AnalyticNPKE#71-application)
-1. [AnalyticNPKE-Feedback.py](https://github.com/Cruz-Lopez-Carlos-Antonio/AnalyticNPKE#8-analyticnpke-feedbackpy)
-   - [8.1 Example of an Application of the AnalyticNPKE-Feedback.py](https://github.com/Cruz-Lopez-Carlos-Antonio/AnalyticNPKE#81-example-of-an-application-of-the-analyticnpke-feedbackpy)
-1. [References](https://github.com/Cruz-Lopez-Carlos-Antonio/AnalyticNPKE?tab=readme-ov-file#9-references)
+   
 
 ## 1. Mathematical description of the problem
 Following the ideas of Ray and Patra (2014), a compartmental version of the The Fractional Neutron Point Kinetic Equations (FNPKE), with $K$ groups of precursors of delayed neutrons, can be written as follows:
