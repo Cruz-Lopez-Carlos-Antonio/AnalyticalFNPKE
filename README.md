@@ -296,7 +296,7 @@ The code **AnalyticFNPKE_Insertion.m** that is provided in the repository, solve
 >[!WARNING]
 > The AnalyticFNPKE-Insertion.py code only can be used for cases with constant reactivities. For linear-time reactivities see the AnalyticFNPKE-Ramp.py code.
 
-## 6.1 Verification of the AnalyticFNPKE-Insertion.m
+### 6.1 Verification of the AnalyticFNPKE-Insertion.m
 A first step in the development of the codes consists of reproducing the integer case for $\alpha=1$. In other words, the fractional model must to reproduce the data obtained with the integer code [AnalyticNPKE-Insertion.py](https://github.com/Cruz-Lopez-Carlos-Antonio/AnalyticNPKE#6-analyticnpke-insertionpy). Therefore we will use the following initial conditions:
 
 $$ n (0) =1  \ \ \ \ C_i(0)=\frac{\beta_i n_0}{\lambda_i^\alpha \Lambda^\alpha}, \tag{30} $$
@@ -374,7 +374,7 @@ Columns 1 through 6
 ```
 where the first value is the Target time, the second is the neutron density and the rest of the values is the concentration of each group of the delayed neutrons.The data provided before coincides with the one reported by Nahla (2010, 1626) for the neutron density. 
 
-## 6.2 Calculations for the fractional order $\alpha = 0.9$
+### 6.2 Calculations for the fractional order $\alpha = 0.9$
 As a second example we will solve the previous case, but considering a fractional order different from 1. Essentially we have the same input that the previous case with the following modification:
 
 ```MATLAB
