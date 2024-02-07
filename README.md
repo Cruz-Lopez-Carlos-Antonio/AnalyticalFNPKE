@@ -375,7 +375,7 @@ Columns 1 through 6
 where the first value is the Target time, the second is the neutron density and the rest of the values is the concentration of each group of the delayed neutrons.The data provided before coincides with the one reported by Nahla (2010, 1626) for the neutron density. 
 
 ## 6.2 Calculations for the fractional order $\alpha = 0.9$
-As a second example we will solve the previous case, but considering a fractional order different from 1. Essentially we have the same input with the following modification:
+As a second example we will solve the previous case, but considering a fractional order different from 1. Essentially we have the same input that the previous case with the following modification:
 
 ```MATLAB
 %************************** Input **********************************
