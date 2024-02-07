@@ -343,4 +343,17 @@ step = 10
 > [!WARNING]  
 > The input contains two different variables for the time: Target and step. This last is due to numerical issues that the Mittag-Leffler can face for very large times. Therefore, we suggest to consider that these variables have the same value for times lower than 10s. Nevertheless for greater times we suggest to use a time step, which will provide a more efficient implementation.
 
+### Output
+The output for the data provided before is give as follows:
+```MATLAB
+Columns 1 through 6
+
+                        10         0.236110650788775          41.2716360082132          82.2178257032565          12.8950840417643          6.09715513377952
+
+  Columns 7 through 8
+
+          0.33542103625059        0.0240863276763245
+```
+where the first value is the Target time, the second is the neutron density and the rest of the values is the concentration of each group of the delayed neutrons.
+
 
