@@ -472,4 +472,12 @@ step = 10
 The **AnalyticFNPKE_ramp.m**  generates a single output, which consits of ".xlsx" file with a single sheet in which the first column is the time, the second one is the neutron density and the rest of columns contains the results of the precursors of delayed neutrons. 
 
 ### Output ###
-The output file for this example is given in the following [link](https://github.com/Cruz-Lopez-Carlos-Antonio/AnalyticalFNPKE/blob/main/Output_ramp.xlsx)
+The output file for this example is given in the following [link](https://github.com/Cruz-Lopez-Carlos-Antonio/AnalyticalFNPKE/blob/main/Output_ramp.xlsx).
+
+> [!WARNING]  
+> The size of the .xlsx is about 10-20 Mb.
+
+> [!NOTE]  
+> The code provided a counter where is showed the progress of the calculation, which appears in the command Window of the MATLAB software.
+
+
