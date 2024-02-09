@@ -428,6 +428,7 @@ The following lines show how the input parameters can be introduced to the code.
 
 <details><summary>CLICK HERE to expand the input of the application of the AnalyticFPKE_ramp.m</summary>
 <p>
+
 ```MATLAB
 %*******************************************************************
 %************************** Input **********************************
