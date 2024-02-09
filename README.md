@@ -491,3 +491,15 @@ The following table contains a comparison of the data computed (extracted from t
 | 8.0           |42.786295      | 42.786294         |5.16193E-07      |
 | 10.0          |451163.62      | 451163.61         |0.009243646      |
 
+As it can be observed the error remains below of $10^{-3}$ %. 
+
+### 7.2 Calculations for the fractional order $\alpha = 0.9$
+As a second example, the **AnalyticFNPKE_ramp.m** code will be used to compute the neutron's density considering a fractional order $\alpha =0.5$. The input is very similar to the one used in the past case, but the following line must to be changed:
+
+```MATLAB
+
+%*******************************************************************
+%************************** Input **********************************
+%fractional order 
+alpha_f = 0.9;
+```
