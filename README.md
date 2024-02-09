@@ -424,5 +424,39 @@ The initial conditions are the same that in the previous case, $\beta=0.007$ and
 $$\rho(t)=0.1\beta t, \tag{32}$$
 
 ### Input
+```MATLAB
+%*******************************************************************
+%************************** Input **********************************
 
+%fractional order
+alpha_f = 1;
 
+%Vector with the standard decay lambda constants of the precursors
+L=[0.0127 0.0317 0.115 0.311 1.4 3.87];
+
+%Betas
+Betas =[0.000285,0.0015975,0.00141,0.0030525,0.00096,0.000195];
+
+%reactivity
+rho = -0.0075
+
+%Lambda_U
+Lambda_U=0.0005;
+
+% These lines do not need to be modified.
+%Beta total, lambda^alpha, Lambda_U^alpha
+L_f = L.^alpha_f;
+LAM_f = Lambda_U^alpha_f;
+
+%Initial conditions
+n0 = 1;
+C0 = (n0/LAM_f)*Betas./L_f
+
+% The step variable is used for large times, with the purpose of
+% avoiding possible numerical issues with the Mittag-Leffler. 
+% For small values (of the order of 10 seconds), Target can be equal
+% to the time step.
+
+Target = 10
+step = 10
+```
