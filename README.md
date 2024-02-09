@@ -424,6 +424,10 @@ The initial conditions are the same that in the previous case, $\beta=0.007$ and
 $$\rho(t)=0.1\beta t, \tag{32}$$
 
 ### Input
+The following lines show how the input parameters can be introduced to the code.
+
+<details><summary>CLICK HERE to expand the input of the application of the AnalyticFPKE_ramp.m</summary>
+<p>
 ```MATLAB
 %*******************************************************************
 %************************** Input **********************************
@@ -460,3 +464,5 @@ C0 = (n0/LAM_f)*Betas./L_f
 Target = 10
 step = 10
 ```
+</p>
+</details>
