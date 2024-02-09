@@ -480,4 +480,14 @@ The output file for this example is given in the following [link](https://github
 > [!NOTE]  
 > The code provided a counter where is showed the progress of the calculation, which appears in the command Window of the MATLAB software.
 
+### Verification ###
+The following table contains a comparison of the data computed (extracted from the .xlsx) with the data reported by Hamada (2018, p. 3034). As it can be observed, the results agree with at least seven precision digits. 
 
+|Time | Reference (Hamada, 2018)| AnalyticFNPKE_ramp | Relative %          |
+| ------------- | ------------- | -------------     | --------------  |
+| $\lambda_1$   |0.0127         | $\beta_1$         |0.000266         |
+| $\lambda_2$   |0.0317         | $\beta_2$         |0.001491         |
+| $\lambda_3$   |0.115          | $\beta_3$         |0.001316         |
+| $\lambda_4$   |0.311          | $\beta_4$         |0.002849         |
+| $\lambda_5$   |1.40           | $\beta_5$         |0.000896         |
+| $\lambda_6$   |3.87           | $\beta_6$         |0.000182         |
