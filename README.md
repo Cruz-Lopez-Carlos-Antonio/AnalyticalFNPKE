@@ -37,8 +37,8 @@ The authors appreciate the financial support received from the Consejo Nacional 
 
 ## 1. Mathematical description of the problem
 Following the ideas of Ray and Patra (2014), a compartmental version of the The Fractional Neutron Point Kinetic Equations (FNPKE), with $K$ groups of precursors of delayed neutrons, can be written as follows:
-
-$$D_C^\alpha n\left(t\right)=\frac{\rho\left(t\right)-\beta}{\Lambda^\alpha}n\left(t\right)+\sum_{i=1}^{K}{\lambda_i^\alpha C_i(t)}, \tag{1}$$
+```math
+D_C^\alpha n\left(t\right)=\frac{\rho\left(t\right)-\beta}{\Lambda^\alpha}n\left(t\right)+\sum_{i=1}^{K}{\lambda_i^\alpha C_i(t)}, \tag{1}
 
 $$D_C^\alpha C\left(t\right)=\frac{\beta_i}{\Lambda^\alpha}n\left(t\right)-\lambda_i^\alpha C_i\left(t\right),\ \ \ \ \ 1\le\ i\le\ K, \tag{2}$$
 
