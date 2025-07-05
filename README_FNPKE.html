@@ -1,0 +1,764 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Analytical Solution of the FNPKE</title>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async
+    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+  </script>
+  <style>
+    body {
+      font-family: "Georgia", serif;
+      line-height: 1.6;
+      max-width: 900px;
+      margin: auto;
+      padding: 2rem;
+      background-color: #fdfdfd;
+      color: #222;
+    }
+    h1, h2, h3 {
+      color: #003366;
+    }
+    code {
+      background: #eee;
+      padding: 0.2rem 0.4rem;
+      border-radius: 4px;
+    }
+    pre {
+      background: #f4f4f4;
+      padding: 1rem;
+      overflow-x: auto;
+    }
+    a {
+      color: #1a0dab;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 1rem;
+      margin-bottom: 1rem;
+    }
+    table, th, td {
+      border: 1px solid #ccc;
+    }
+    th, td {
+      padding: 0.5rem;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+<h1 id="analytical-solution-of-the-fractional-neutron-point-kinetic-equations">Analytical Solution of the Fractional Neutron Point Kinetic Equations.</h1>
+
+<p>The present repository contains the MATLAB codes developed to solve the Fractional Neutron Point Kinetic Equations (FNPKE). These codes were described in the article <em>A New Solution of the Fractional Neutron Point Kinetics Equations using Symmetry and the Heaviside’s expansion formula</em>, which was recently submitted to the <strong>Progress in Nuclear Energy</strong> journal. </p>
+
+<p>The programs are licensed under a Creative Commons Attribution 4.0 International License: http://creativecommons.org/licenses/by/4.0/</p>
+
+<p>Authors: Carlos-Antonio Cruz-López (cacl.nucl@gmail.com), Gilberto Espinosa-Paredes (gepe@xanum.uam.mx)</p>
+
+<p>Mathematical and algorithmical generalities of the codes are described in the following lines with the purpose to provide some insight of the developed work. Nevertheless, a more detailed discussion is provided in the submitted article.</p>
+
+<h2 id="software-specifications-and-requirements">Software specifications and requirements.</h2>
+
+<p>The AnalyticFNPKE codes were written in the MATLAB programming language R2021a, but older versions can be used, from the R2012b one onward. The reported examples and results were obtained in a 3.8 GHz desktop computer, with 32 Gb of RAM and under a Windows 11 environment. The developed codes require the following script, which was written by Roberto Garrappa (2015, 2024):
+- [x] ml.m</p>
+
+<p>This last file can be freely download from the mathworks site in the following <a href="https://www.mathworks.com/matlabcentral/fileexchange/48154-the-mittag-leffler-function">link</a>.</p>
+
+<h2 id="financial-support">Financial Support.</h2>
+
+<p>The authors appreciate the financial support received from the Consejo Nacional de Humanidades, Ciencia y Tecnología (CONAHCYT), under the program <em>Estancias Posdoctorales por México, 2022</em>, with the project entitled: <em>Desarrollo de modelos fenomenológicos energéticos de orden fraccional, para la optimización y simulación en reactores nucleares de potencia</em>, by which the present development was possible.</p>
+
+<h2 id="index-of-the-repository">Index of the Repository</h2>
+
+<ol>
+<li><a href="https://github.com/Cruz-Lopez-Carlos-Antonio/AnalyticalFNPKE#1-mathematical-description-of-the-problem">Mathematical description of the problem.</a></li>
+<li><a href="https://github.com/Cruz-Lopez-Carlos-Antonio/AnalyticalFNPKE#2-laplace-transform-of-the-system">Laplace transform of the system.</a></li>
+<li><a href="https://github.com/Cruz-Lopez-Carlos-Antonio/AnalyticalFNPKE#3-analytical-solution-and-polynomials">Analytical solution and Polynomials.</a></li>
+<li><a href="https://github.com/Cruz-Lopez-Carlos-Antonio/AnalyticalFNPKE/blob/main/README.md#4equivalence-between-the-integers-solution-and-the-fractional-one">Equivalence between the integer's solution and the fractional one.</a>
+<ul>
+<li><a href="https://github.com/Cruz-Lopez-Carlos-Antonio/AnalyticalFNPKE/blob/main/README.md#41-equivalence-between-the-sums">4.1 Equivalence between the sums.</a></li>
+<li><a href="https://github.com/Cruz-Lopez-Carlos-Antonio/AnalyticalFNPKE/blob/main/README.md#42-equivalence-between-the-polynomials"> 4.2 Equivalence between the Polynomials.</a></li>
+<li><a href="https://github.com/Cruz-Lopez-Carlos-Antonio/AnalyticalFNPKE#43-equivalence-between-the-mittag-leffler-function-and-the-exponential-one"> 4.3 Equivalence between the Mittag-Leffler function and the exponential one.</a></li>
+</ul></li>
+<li><a href="https://github.com/Cruz-Lopez-Carlos-Antonio/AnalyticalFNPKE#5-algorithmical-implementation">Algorithmical Implementation.</a>
+<ul>
+<li><a href="https://github.com/Cruz-Lopez-Carlos-Antonio/AnalyticalFNPKE#51-requirements">5.1 Requeriments.</a></li>
+<li><a href="https://github.com/Cruz-Lopez-Carlos-Antonio/AnalyticalFNPKE#52-from-python-to-matlab">5.2 From Python to MATLAB.</a></li>
+<li><a href="https://github.com/Cruz-Lopez-Carlos-Antonio/AnalyticalFNPKE#53-sums">5.3 Sums.</a></li>
+<li><a href="https://github.com/Cruz-Lopez-Carlos-Antonio/AnalyticalFNPKE#54-shifted-sums">5.4 Shifted sums.</a></li>
+<li><a href="https://github.com/Cruz-Lopez-Carlos-Antonio/AnalyticalFNPKE#55-polynomials">5.5 Polynomials.</a></li>
+</ul></li>
+<li><a href="https://github.com/Cruz-Lopez-Carlos-Antonio/AnalyticalFNPKE#6-analyticfnpke_insertionm">AnalyticFNPKE<em>Insertion.m</a>
+<ul>
+<li><a href="https://github.com/Cruz-Lopez-Carlos-Antonio/AnalyticalFNPKE#61-verification-of-the-analyticfnpke-insertion.m">6.1 Verification of the AnalyticFNPKE</em>Insertion.m</a></li>
+<li><a href="https://github.com/Cruz-Lopez-Carlos-Antonio/AnalyticalFNPKE#62-calculations-for-the-fractional-order-alpha--09">6.2 Example of a calculation with the AnalyticFNPKE_Insertion.m</a></li>
+</ul></li>
+<li><a href="https://github.com/Cruz-Lopez-Carlos-Antonio/AnalyticalFNPKE#7-analyticfnpke_rampm">AnalyticFNPKE_Ramp.m</a></li>
+</ol>
+
+<h2 id="1-mathematical-description-of-the-problem">1. Mathematical description of the problem</h2>
+
+<p>Following the ideas of Ray and Patra (2014), a compartmental version of the The Fractional Neutron Point Kinetic Equations (FNPKE), with $K$ groups of precursors of delayed neutrons, can be written as follows:</p>
+
+<p>$$D<em>C^\alpha n\left(t\right)=\frac{\rho\left(t\right)-\beta}{\Lambda^\alpha}n\left(t\right)+\sum</em>{i=1}^{K}{\lambda<em>i^\alpha C</em>i(t)}$$</p>
+
+<p>$$D<em>C^\alpha C\left(t\right)=\frac{\beta</em>i}{\Lambda^\alpha}n\left(t\right)-\lambda<em>i^\alpha C</em>i\left(t\right),\ \ \ \ \ 1\le\ i\le\ K, \tag{2}$$</p>
+
+<p>where $n(t)$ denotes the neutron density and $\rho(t)$  the reactivity. $C(t),\lambda<em>k,\beta</em>k$ are the concentration, the decay constant and the fraction of the $k$-group of precursors of the delayed neutrons, respectively. $\Lambda$ represents the prompt neutron generation time,  $\beta$ is given by:</p>
+
+<p>$$\sum<em>{k=1}^{K}\beta</em>k=\beta, \tag{3}$$</p>
+
+<p>and the operator $D<em>C^\alpha$ denotes the fractional derivative of Caputo, defined as:
+$$D</em>C^\alpha f\left(t\right)=\frac{1}{\Gamma(n-\alpha)}\int_{0}^{t}{f^{\left(n\right)}\left(\tau\right)\left(t-\tau\right)^{n-\alpha-1}d\tau}, \tag{4}$$</p>
+
+<p>where $\alpha$ is the fractional order, $\Gamma(\cdot)$ is the Gamma function, and $n \in \mathbb{N}$ fulfills the following inequality:</p>
+
+<p>$$n-1 \leq \alpha &lt; n. \tag{5}$$</p>
+
+<p>This fractional version is different from the one proposed by Espinosa-Paredes et al. (2011), because it was developed in terms of a fractional mass balance approach, instead of a transport theory's one. The physical implications are discussed in detail in the submitted paper, but it can be understood, essentially, as a fractional compartmental model similar to the one developed in the Pharmacokinetic field (Dokoumetzidis, 2010).
+Nahla developed an analytic solution of a system related to Eq. (1) and Eq.(2) (2017) using the Laplace transform and a matrix approach. We proposed a different approach using algebraic theory of equations and a procedure that uses symmetry. </p>
+
+<h2 id="2-laplace-transform-of-the-system">2. Laplace transform of the system.</h2>
+
+<p>The Laplace transform of the Caputo's derivative fulfills the following relationship (Ishteva, 2005, p. 21):</p>
+
+<p>$$\mathcal{L} \{D<em>C^\alpha (t),s \}=s^\alpha F\left(s\right)-\sum</em>{k=0}^{n-1}{s^{\alpha-k-1}f^{\left(k\right)}(0)}, \tag{6}$$</p>
+
+<p>where $F(s)=\mathcal{L} \{f(t),s \}$ denotes the standard Laplace transform of $f(t)$ and $f^{k}(0)$ are the initial conditions of the function. Applying the last relationship on both sides of Eq. (1) and Eq. (2), the following equations are obtained:</p>
+
+<p>$$s^\alpha\widetilde{n}\left(s\right)-s^{\alpha-1}n\left(0\right)=\frac{\rho-\beta}{\Lambda^\alpha}\widetilde{n}\left(t\right)+\sum<em>{i=1}^{K}{\lambda</em>i^\alpha{\widetilde{C}}_i}\left(s\right), \tag{7}$$</p>
+
+<p>$$s^\alpha{\widetilde{C}}<em>i\left(s\right)-s^{\alpha-1}C</em>i\left(0\right)=\frac{\beta<em>i}{\Lambda^\alpha}\widetilde{n}\left(s\right)-\lambda</em>i^\alpha{\widetilde{C}}_i(s). \tag{8}$$</p>
+
+<p>Using a new procedure based on the symmetry between this fractional system and the integer one, it is possible to rewrite the last systems of equation as follows:</p>
+
+<p>$$\widetilde{n}\left(s\right)=\sum<em>{j=1}^{K+1}{A</em>j\frac{s^{\alpha-1}}{s^\alpha-p_{j,f}}}, \tag{9}$$</p>
+
+<p>$${\widetilde{C}}<em>{i}(s) =\frac{\beta</em>i}{\Lambda^\alpha} \sum <em>{j=1}^{K+1}A</em>j \frac{s^{\alpha-1}}{s^\alpha-p <em>{j,f}} \frac{1}{s^\alpha+\lambda</em>i^\alpha} +C<em>i\left(0\right)\frac{s^{\alpha-1}}{s^\alpha+\lambda</em>i^\alpha}, \tag{10}$$</p>
+
+<p>where the coefficients $A<em>j$ are constants defined as:
+$$A</em>j=\frac{n\left(0\right)Q<em>f\left(p</em>{j,f}\right)+H<em>f(p</em>{j,f})}{P<em>f^\prime(p</em>{j,f})}, \tag{11}$$</p>
+
+<p>being $Q<em>f(s), H</em>f(s)$ and $P'_ f(s)=dP<em>f(s)/ds$ polynomials that are evaluated at the set of real numbers $p</em>{j,f}$, which in turn are the roots of the $P_f(s)$ polynomial. <strong>A more detailed explanation about the deduction of the last expressions and the way in which the quotient of polynomials was obtained, is provided in the submitted paper.</strong> Only the main mathematical aspects are discussed in the present repository, with the purpose to develop a computational algorithm.</p>
+
+<h2 id="3-analytical-solution-and-polynomials">3. Analytical solution and Polynomials.</h2>
+
+<p>Using Eq. (9) and Eq. (10), it is possible to find the solutions of $n(t)$ and $C_i(0)$ as follows:</p>
+
+<p>$$n\left(t\right)=\sum<em>{j=1}^{K+1}A</em>jE<em>{\alpha,1}(p</em>{j,f}t^\alpha), \tag{12}$$</p>
+
+<p>$$C<em>i\left(t\right)=\frac{\beta</em>i}{\Lambda^\alpha}\sum<em>{j=1}^{K+1}A</em>j\frac{E<em>{\alpha,1}\left(p</em>{j,f}t^\alpha\right)-E<em>{\alpha,1}(-\lambda</em>i^\alpha t^\alpha)}{p<em>{j,f}+\lambda</em>i^\alpha}+C<em>i\left(0\right)E</em>{\alpha,1}(-\lambda_i^\alpha t^\alpha), \tag{13}$$</p>
+
+<p>where $E_{\alpha,1}(z)$ is the Mittag-Leffler function, which can be defined as (Gorenflo et al., 2020, p. 64):</p>
+
+<p>$$E<em>{\alpha,\beta}\left(z\right)=\sum</em>{k=0}^{\infty}\frac{z^k}{\Gamma(k\alpha+\beta)},\ \tag{14}$$ </p>
+
+<p>with $\mathfrak{R}\left(\alpha\right)&gt;0,\ \beta\in\mathbb{C}$. On the other hand, explicit expressions of the Polynomials related to coefficients $A<em>j$ are given by:
+$$P</em>f\left(s\right)=s^{K+1}+\left(S<em>{1,K}-u\right)s^K+\left(S</em>{2,K}-uS<em>{1,K}-\frac{1}{\Lambda^\alpha}\sum</em>{i=1}^{K}{\lambda<em>i^\alpha\beta</em>i}\right)s^{K-1}$$</p>
+
+<p>$$+\sum<em>{i=3}^{K}{\left(S</em>{i,K}-uS<em>{i-1,K}-\frac{1}{\Lambda^\alpha}\sum</em>{j=1}^{K}{\lambda<em>j^\alpha\beta</em>jS<em>{i-2,K-1}^j}\right)s^{K+1-i}-uS</em>{K,K}}$$</p>
+
+<p>$$-\frac{1}{\Lambda^\alpha}\sum<em>{i=1}^{K}{\lambda</em>i^\alpha\beta<em>iS</em>{K-1,K-1}^i}; \tag{15}$$</p>
+
+<p>$$H<em>f(s)=\sum</em>{i=1}^{K}\lambda<em>i^\alpha C</em>i(0)s^{K-1}+\sum<em>{j=2}^{K} \sum</em>{i=1}^{K}{\lambda<em>i^\alpha C</em>i(0) S_{j-1,K-1}^i}s^{K-j}; \tag{16}$$ </p>
+
+<p>and:
+$$Q<em>f\left(s\right)=s^K+\sum</em>{j=1}^{K}{S_{j,K}s^{K-j}}, \tag{17}$$</p>
+
+<p>where the sums $S<em>{m,n}$ and $S</em>{m,n}^i$ are defined as:</p>
+
+<p>$$ S<em>{m,n}=\sum</em>{k<em>1=1}^{n-m+1}\sum</em>{k<em>2=k</em>1+1}^{n-m+2} \cdots \sum<em>{k</em>m=k<em>{m-1}+1}^{n} {\lambda</em>{k<em>1}^{\alpha} \lambda</em>{k<em>2}^{\alpha} \cdots\lambda</em>{k_m}^{\alpha}}, \tag{18}$$</p>
+
+<p>$$S<em>{m,n}^i=\sum</em>{k<em>1=1,\ k</em>1\neq i}^{n-m+1}{\ \sum<em>{k</em>2=k<em>1+1,k</em>2\neq i}^{n-m+2}\cdots}\sum<em>{k</em>m=k<em>{m-1}+1,\ k</em>m\neq i}^{n}{\lambda<em>{k</em>1}^{\alpha} \lambda<em>{k</em>2}^{\alpha} \cdots\lambda<em>{k</em>m}^{\alpha}}, \tag{19}$$</p>
+
+<p>and:
+$$u=\frac{\rho-\beta}{\Lambda^\alpha} \tag{20}$$</p>
+
+<h2 id="4equivalence-between-the-integers-solution-and-the-fractional-one">4.Equivalence between the integer's solution and the fractional one.</h2>
+
+<p>It is possible to show that the developed solution can be reduced to the expressions related to the integer case. These last were developed in the work <em>A New Simplified Analytical Solution to Solve the Neutron Point Kinetics Equations Using the Laplace Transform Method</em>, which was publised in the journal <em>Computer Physics Communications</em>. We made a particular repository for the integer case that can be consulted in the following <a href="https://github.com/Cruz-Lopez-Carlos-Antonio/AnalyticNPKE/tree/main">link</a>.</p>
+
+<h3 id="41-equivalence-between-the-sums">4.1 Equivalence between the sums.</h3>
+
+<p>It is possible to understand the sums that were defined in Eq. (18) and Eq. (19) as functions over a set. In fact, it is necessary to define:</p>
+
+<p>$$\mathcal{S}_m:\Omega\rightarrow\mathbb{R}, m\in \mathbb{N}, m\leq n,$$</p>
+
+<p>where $\Omega$ is a set of real numbers given by $\Omega = \set{a<em>1,a</em>2,\cdots,a_n}$, and:</p>
+
+<p>$$S<em>m(\Omega)=S</em>m(\set{a<em>1,a</em>2,\ldots,a<em>n})=\sum</em>{k<em>1=1}^{n-m+1} \sum</em>{k<em>2=k</em>1+1}^{n-m+2}\cdots \sum<em>{k</em>m=k<em>{m-1}+1}^{n}{a</em>{k<em>1}a</em>{k<em>2}\cdots a</em>{k_m}}. \tag{21}$$</p>
+
+<p>Therefore, the sums can be rewritten as follows:</p>
+
+<p>$$S<em>m(\set{\lambda</em>1^\alpha,\lambda<em>2^\alpha,\ldots,\lambda</em>n^\alpha})=S<em>m(\set{\lambda</em>i^\alpha\|1\leq i \leq\ n})\ = S_{m,n}. \tag{22}$$</p>
+
+<p>Even more, using this function defined over sets, it is possible to compute the sum given in Eq. (19), that has a restriction over the indexes, as follows:
+$$S<em>{m,n}^i=S</em>m(\Omega^i)=S<em>m (\set{\lambda</em>1^\alpha,\lambda<em>2^\alpha,\ldots,\lambda</em>{i-1}^\alpha,\lambda<em>{i+1}^\alpha,\ldots,\lambda</em>n^\alpha})$$
+$$=S<em>m(\set{\lambda</em>k^\alpha |1\leq k\leq n,\ k\neq i}). \tag{23}$$</p>
+
+<p>Using this notation, it follows that:</p>
+
+<p>$$\lim<em>{\alpha \rightarrow 1} \underbrace{S</em>m(\Omega)}_ {\mathrm{Fractional\ case}}= S<em>m(\lim</em>{\alpha \rightarrow 1}{\Omega})=S<em>m(\lim</em>{\alpha \rightarrow 1} \set{\lambda<em>1^\alpha,\lambda</em>2^\alpha,\cdots,\lambda_n^\alpha})$$</p>
+
+<p>$$= S<em>m(\set{\lambda</em>1,\lambda<em>2,\cdots,\lambda</em>n}) =\underbrace{S<em>m(\set{\lambda</em>1,\lambda<em>2,\ldots,\lambda</em>n}}_{\mathrm{Integer\ case}}. \tag{24}$$</p>
+
+<p>This last expression is identical to one that is given for the integer case, as it can be corroborated in the following <a href="https://github.com/Cruz-Lopez-Carlos-Antonio/AnalyticNPKE#4-simplification-of-the-polynomials">link</a>. A similar proof can be done for the case of $S_{m,n}^i$. </p>
+
+<h3 id="42-equivalence-between-the-polynomials">4.2 Equivalence between the Polynomials.</h3>
+
+<p>Once the equivalcente between the sums has been proved, it is possible to show the equivalcence of the Polynomials. This last can be done in a straighforward way observing that the polynomials can be written in terms of two variables as follows:</p>
+
+<p>$$\lim<em>{\alpha\rightarrow1}{P</em>f(s,\alpha)}=\lim<em>{\alpha\rightarrow1}({s^{K+1}+\left(\fbox{$S</em>{1,K}$}-\frac{\rho-\beta}{\Lambda^{\fbox{$\alpha$}}}\right)s^K}$$</p>
+
+<p>$$+ \left(\fbox{$S<em>{2,K}$}-\frac{\rho-\beta}{\Lambda^{\fbox{$\alpha$}}}\fbox{$S</em>{1,K}$}-\frac{1}{\Lambda^{\fbox{$\alpha$}}}\sum<em>{i=1}^{K}{\lambda</em>i^{\fbox{$\alpha$}}\beta_i}\right)s^{K-1}$$</p>
+
+<p>$$+\sum<em>{i=3}^{K}{\left(\fbox{$S</em>{i,K}$}-\frac{\rho-\beta}{\Lambda^{\fbox{$\alpha$}}}\fbox{$S<em>{i-1,K}$}-\frac{1}{\Lambda^{\fbox{$\alpha$}}}\sum</em>{j=1}^{K}{\lambda<em>j^{\fbox{$\alpha$}}\beta</em>j\fbox{$S<em>{i-2,K-1}^j$}}\right)s^{K+1-i}-\frac{\rho-\beta}{\Lambda^{\fbox{$\alpha$}}}\fbox{$S</em>{K,K}$}}$$</p>
+
+<p>$$-\frac{\rho-\beta}{\Lambda^{\fbox{$\alpha$}}}\fbox{$S<em>{K,K}$}-\frac{1}{\Lambda^{\fbox{$\alpha$}}}\sum</em>{i=1}^{K}{\lambda<em>i^{\fbox{$\alpha$}}\beta</em>i\fbox{$S_{K-1,K-1}^i$}}. \tag{25}$$</p>
+
+<p>All the parts that depend on the fractional order $\alpha$ have been enclosed in a box, with the purpose to show the explicit dependence of that parameter. From Eq. (25) and Eq. (25) |it follows that:</p>
+
+<p>$$\lim<em>{\alpha \rightarrow 1} \underbrace{P</em>f (s,\alpha)} _ {\mathrm{Fractional\ case}}=\underbrace{P(s)}_{\mathrm{Integer\ case}}, \tag{26}$$</p>
+
+<p>where the form of the polynomial $P(s)$ can be consulted in the following <a href="https://github.com/Cruz-Lopez-Carlos-Antonio/AnalyticNPKE#4-simplification-of-the-polynomials">link</a>. Similar proofs can be carried out for the polynomials $H(s)$ and $Q(s)$. </p>
+
+<h3 id="43-equivalence-between-the-mittag-leffler-function-and-the-exponential-one">4.3 Equivalence between the Mittag-Leffler function and the exponential one.</h3>
+
+<p>From the definition given in Eq. (14), it follows that:</p>
+
+<p>$$\lim<em>{\alpha \rightarrow 1} E</em>{\alpha,1}(z)=\sum<em>{k=0}^{\infty} \frac{z^k}{\Gamma(\alpha k+1)}=\sum</em>{k=0}^{\infty} \lim_{\alpha \rightarrow 1} \frac{z^k}{\Gamma(\alpha k+1)} \tag{27}$$</p>
+
+<p>$$=\sum<em>{k=0}^{\infty} \frac{z^k}{\Gamma(k+1)}=\sum</em>{k=0}^{\infty}\frac{z^k}{k!}=\exp(z)$$</p>
+
+<p>where the limit has been interchanged with the series due to the absolute convergence of the Mittag-Leffler function. Combining the results given in <strong>Section 4.1</strong>, <strong>Section 4.2</strong> and in the present section, it follows that the analytic solution of the FNPKE is obtained from the analytical solution of the fractional version. This result is relevant in terms of the algorithmical implementation, because allows extending all the codes that were developed for the NPKE (which can be consulted <a href="https://github.com/Cruz-Lopez-Carlos-Antonio/AnalyticNPKE#4-simplification-of-the-polynomials">here</a>.</p>
+
+<h2 id="5-algorithmical-implementation">5. Algorithmical implementation.</h2>
+
+<h3 id="51-requirements">5.1 Requirements.</h3>
+
+<p>The present codes require, for their execution, of the <strong>ml.m</strong> code developed by Garrappa (2015, 2024), which can be freely download in the following <a href="https://www.mathworks.com/matlabcentral/fileexchange/48154-the-mittag-leffler-function">link</a>. It is worth mentioning that the use of such code is subject to a licence that must to be consulted. 
+In order to use such code it is necessary to include it in the folder where the AnalyticFNPKE codes are saved. In the following image such procedure is showed:</p>
+
+<p><img src="https://github.com/Cruz-Lopez-Carlos-Antonio/AnalyticalFNPKE/assets/139827225/c370713f-75a2-4a4a-9bba-e0dfb8885cfc" alt="image" /></p>
+
+<h3 id="52-from-python-to-matlab">5.2 From Python to MATLAB.</h3>
+
+<p>Due to the symmetry and equivalence between the fractional and the integer case (when $\alpha =1$), in principle the codes that were developed for the NPKE in the Python language can be used, with a slightly modifications, to solve the FNPKE. Unfortunately there is an important obstacle that prevents that: the computation of the Mittag-Leffler function. 
+This function requires for special algorithms to be accurately computed, because its standard definition given in Eq. (14) in terms of power series has a very slow convergence, requiring several terms to have an adequate result.
+The main problem is related to the following term:
+$$\Gamma(k\alpha+\beta) \tag{28}$$</p>
+
+<p>which exhibits numerical issues for greater values of $k$, as Ortigueira et al. (2019) has pointed out. Therefore, it is necessary to use a more advanced method to compute such function, as the one provided by Roberto Garrappa (2015, 2024). Nevertheless, this author implements its algorithm in the MATLAB programming language, being a non-trivial task to migrate it to Python. Therefore it is necessary to change of programming language in order to include it.</p>
+
+<h3 id="53-sums">5.3 Sums.</h3>
+
+<p>The first step of the algorithmical implementation oconsists of computing the sum given in the Eq. (18) and Eq. (22). As in the <a href="https://github.com/Cruz-Lopez-Carlos-Antonio/AnalyticNPKE#51-sums">integer case</a>, it is possible to estimate these nested sums using counting techniques, for which the products of Eq. (18) can be understood as combinations of $m$ elements from a total of $n$ of the set $\Omega = \set{\lambda<em>1^{\alpha},\lambda</em>2^{\alpha},\cdots,\lambda_n^{\alpha}}$. Therefore it is necessary to use the following operations:
+- [x] <strong>nchoosek(L,m)</strong>: generates a matrix whose rows are the different combinations of $m$ elements of the total contained in the L vector.
+- [x] <strong>prod(Array,2)</strong>: makes the product of the arrays contained in each row of the matrix generated by the nchoosek(L,m) function.
+- [x] <strong>sum(vec)</strong>: computes the sum of the product of the last step.</p>
+
+<p>The following code includes the last instructions:</p>
+
+<h3 id="code-1">Code #1</h3>
+
+<div class="codehilite">
+<pre><span></span><code><span class="c">%Sum with replacement</span>
+<span class="k">function</span><span class="w"> </span>S1<span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nf">Suma</span><span class="p">(</span>m,L<span class="p">)</span>
+<span class="n">COMB</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nb">nchoosek</span><span class="p">(</span><span class="n">L</span><span class="p">,</span><span class="n">m</span><span class="p">);</span>
+<span class="n">Vec</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nb">prod</span><span class="p">(</span><span class="n">COMB</span><span class="p">,</span><span class="mi">2</span><span class="p">);</span>
+<span class="n">S1</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nb">sum</span><span class="p">(</span><span class="n">Vec</span><span class="p">);</span>
+<span class="k">end</span>
+</code></pre>
+</div>
+
+<h3 id="54-shifted-sums">5.4 Shifted sums</h3>
+
+<p>As it was shown in Eq. (23), the sum $S<em>{m,n}^i$ can be computed with the same algorithm used for the sum without restriction given by $S</em>{m,n}$. It is only necessary to remove the term that corresponds to the $i-$ position. The following MATLAB function carries out these operations:</p>
+
+<h3 id="code-2">Code #2</h3>
+
+<div class="codehilite">
+<pre><span></span><code><span class="c">%Sum with replacement</span>
+<span class="k">function</span><span class="w"> </span>S1i<span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nf">Sumai</span><span class="p">(</span>i,m,L<span class="p">)</span>
+<span class="n">COPY</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">L</span><span class="p">;</span>
+<span class="n">COPY</span><span class="p">(</span><span class="nb">i</span><span class="p">)=[];</span>
+<span class="n">S1i</span><span class="p">=</span><span class="n">Suma</span><span class="p">(</span><span class="n">m</span><span class="p">,</span><span class="n">COPY</span><span class="p">);</span>
+<span class="k">end</span>
+</code></pre>
+</div>
+
+<blockquote>
+  <p>[!IMPORTANT]
+  The <strong>Code 2</strong> depends on the <strong>Code 1</strong>, and therefore it must to appear before this last one. </p>
+</blockquote>
+
+<h3 id="55-polynomials">5.5 Polynomials.</h3>
+
+<h3 id="551-poly_coeff">5.5.1 Poly_Coeff</h3>
+
+<p>The function <strong>Poly<em>Coeff</strong> computes the coefficients of the $P</em>f(s)$ polynomial given in Eq. (15). It returns a vector with real numbers and admits the following arguments:
+1. A vector <strong>L<em>f</strong> that contains the lambda constants with the $\alpha$ power, <strong>L</em>f</strong>=($\lambda<em>1^\alpha,\lambda</em>2^\alpha,\cdots,\lambda<em>n^\alpha$)
+2. A parameter <strong>LAM</em>f</strong> whose value is the same that $\Lambda^\alpha$.
+3. The reactivity, denoted by the variable $\rho$.
+4. A vector called <strong>Betas</strong> that contains the fractions of the precursors of the delayed neutrons, given by Betas =($\beta<em>1,\beta</em>2,\cdots,\beta<em>n$)
+The following code contains the <strong>Poly</em>coeff</strong> function:</p>
+
+<h3 id="code-3">Code #3</h3>
+
+<div class="codehilite">
+<pre><span></span><code><span class="k">function</span><span class="w"> </span>P1<span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nf">Poly_Coeff</span><span class="p">(</span>L_f,LAM_f,rho,Betas<span class="p">)</span>
+<span class="n">C_P</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">[</span><span class="w"> </span><span class="p">];</span>
+<span class="n">bet_tot</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nb">sum</span><span class="p">(</span><span class="n">Betas</span><span class="p">);</span>
+<span class="n">u</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">(</span><span class="n">rho</span><span class="o">-</span><span class="n">bet_tot</span><span class="p">)</span><span class="o">/</span><span class="n">LAM_f</span><span class="p">;</span>
+<span class="n">C_P</span><span class="p">(</span><span class="mi">1</span><span class="p">:</span><span class="mi">3</span><span class="p">)=[</span><span class="mi">1</span><span class="w"> </span><span class="n">Suma</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="n">L_f</span><span class="p">)</span><span class="o">-</span><span class="n">u</span><span class="w"> </span><span class="n">Suma</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="n">L_f</span><span class="p">)</span><span class="o">-</span><span class="n">u</span><span class="o">*</span><span class="n">Suma</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="n">L_f</span><span class="p">)</span><span class="o">-</span><span class="p">(</span><span class="mi">1</span><span class="o">/</span><span class="n">LAM_f</span><span class="p">)</span><span class="o">*</span><span class="nb">dot</span><span class="p">(</span><span class="n">L_f</span><span class="p">,</span><span class="n">Betas</span><span class="p">)];</span>
+
+<span class="k">for</span><span class="w"> </span><span class="nb">i</span><span class="p">=</span><span class="mi">3</span><span class="p">:</span><span class="nb">size</span><span class="p">(</span><span class="n">L_f</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span>
+<span class="w">    </span><span class="n">s1</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="nb">j</span><span class="p">=</span><span class="mi">1</span><span class="p">:</span><span class="nb">size</span><span class="p">(</span><span class="n">L_f</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span>
+<span class="w">        </span><span class="n">s1</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">s1</span><span class="o">+</span><span class="n">L_f</span><span class="p">(</span><span class="nb">j</span><span class="p">)</span><span class="o">*</span><span class="n">Betas</span><span class="p">(</span><span class="nb">j</span><span class="p">)</span><span class="o">*</span><span class="n">Sumai</span><span class="p">(</span><span class="nb">j</span><span class="p">,</span><span class="nb">i</span><span class="o">-</span><span class="mi">2</span><span class="p">,</span><span class="n">L_f</span><span class="p">);</span>
+<span class="w">    </span><span class="n">C_P</span><span class="p">(</span><span class="nb">i</span><span class="o">+</span><span class="mi">1</span><span class="p">)=</span><span class="n">Suma</span><span class="p">(</span><span class="nb">i</span><span class="p">,</span><span class="n">L_f</span><span class="p">)</span><span class="o">-</span><span class="n">u</span><span class="o">*</span><span class="n">Suma</span><span class="p">(</span><span class="nb">i</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="n">L_f</span><span class="p">)</span><span class="o">-</span><span class="p">(</span><span class="mi">1</span><span class="o">/</span><span class="n">LAM_f</span><span class="p">)</span><span class="o">*</span><span class="n">s1</span><span class="p">;</span>
+<span class="w">    </span><span class="k">end</span>
+<span class="k">end</span>
+<span class="n">s2</span><span class="p">=</span><span class="mi">0</span><span class="p">;</span>
+<span class="k">for</span><span class="w"> </span><span class="n">k</span><span class="p">=</span><span class="mi">1</span><span class="p">:</span><span class="nb">size</span><span class="p">(</span><span class="n">L_f</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span>
+<span class="w">    </span><span class="n">s2</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">s2</span><span class="o">+</span><span class="n">L_f</span><span class="p">(</span><span class="n">k</span><span class="p">)</span><span class="o">*</span><span class="n">Betas</span><span class="p">(</span><span class="n">k</span><span class="p">)</span><span class="o">*</span><span class="n">Sumai</span><span class="p">(</span><span class="n">k</span><span class="p">,</span><span class="nb">size</span><span class="p">(</span><span class="n">L_f</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="n">L_f</span><span class="p">);</span>
+<span class="k">end</span>
+<span class="n">C_P</span><span class="p">(</span><span class="nb">size</span><span class="p">(</span><span class="n">L_f</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span><span class="o">+</span><span class="mi">2</span><span class="p">)=</span><span class="o">-</span><span class="n">u</span><span class="o">*</span><span class="n">Suma</span><span class="p">(</span><span class="nb">size</span><span class="p">(</span><span class="n">L_f</span><span class="p">,</span><span class="mi">2</span><span class="p">),</span><span class="n">L_f</span><span class="p">)</span><span class="o">-</span><span class="p">(</span><span class="mi">1</span><span class="o">/</span><span class="n">LAM_f</span><span class="p">)</span><span class="o">*</span><span class="n">s2</span><span class="p">;</span>
+<span class="n">P1</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">C_P</span><span class="p">;</span>
+<span class="k">end</span>
+</code></pre>
+</div>
+
+<h3 id="552-poly_coeff_d">5.5.2 Poly<em>Coeff</em>d</h3>
+
+<p>The function <strong>Poly<em>coeff</em>d</strong> builds the coefficients of the derivative of the polynomial $P<em>f(s)$. It requires the vector generated by the <strong>Poly</em>coeff</strong>, and uses the following relationship:</p>
+
+<p>$$ \frac{dP<em>f(s)}{ds}= \sum</em>{k=1}^{K}c_k ks^{k-1}, \tag{29}$$ </p>
+
+<p>where $c<em>k$ are the coefficients of the polynomial $P</em>f(s)$.The following code implements the Eq. (29) and returns a vector with the coefficients of $\frac{dP_f}{ds}$.</p>
+
+<h3 id="code-4">Code #4</h3>
+
+<div class="codehilite">
+<pre><span></span><code><span class="k">function</span><span class="w"> </span>P_d<span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nf">Poly_Coeff_d</span><span class="p">(</span>P<span class="p">)</span>
+<span class="nb">exp</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nb">size</span><span class="p">(</span><span class="n">P</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span><span class="o">-</span><span class="mi">1</span><span class="p">:</span><span class="o">-</span><span class="mi">1</span><span class="p">:</span><span class="mi">1</span><span class="p">;</span>
+<span class="n">P</span><span class="p">(</span><span class="mi">1</span><span class="p">:</span><span class="nb">size</span><span class="p">(</span><span class="n">P</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span><span class="o">-</span><span class="mi">1</span><span class="p">);</span>
+<span class="n">P_d</span><span class="p">(</span><span class="mi">1</span><span class="p">:</span><span class="nb">size</span><span class="p">(</span><span class="n">P</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span><span class="o">-</span><span class="mi">1</span><span class="p">)=</span><span class="n">P</span><span class="p">(</span><span class="mi">1</span><span class="p">:</span><span class="nb">size</span><span class="p">(</span><span class="n">P</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span><span class="o">.*</span><span class="nb">exp</span><span class="p">;</span>
+<span class="k">end</span>
+</code></pre>
+</div>
+
+<h3 id="553-poly_coeff_h">5.5.3 Poly<em>Coeff</em>H</h3>
+
+<p>The function <strong>Poly<em>Coeff</em>H</strong> returns the coefficients of the polynomial $H<em>f(s)$ given in Eq. (16). It function requires the same input arguments that the polynomial <strong>Poly</em>Coeff</strong>, but in addition it needs a vector, denoted by C<em>0, whose content are the initial conditions of the precursors of the delayed neutrons. 
+The following code implements the <strong>Poly</em>Coeff_H</strong></p>
+
+<h3 id="code-5">Code #5</h3>
+
+<div class="codehilite">
+<pre><span></span><code><span class="k">function</span><span class="w"> </span>H1<span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nf">Poly_Coeff_H</span><span class="p">(</span>L_f,LAM_f,rho,Betas,C0<span class="p">)</span>
+<span class="n">C_H</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">[</span><span class="w"> </span><span class="p">];</span><span class="w">      </span>
+<span class="n">C_H</span><span class="p">(</span><span class="mi">1</span><span class="p">)=</span><span class="nb">dot</span><span class="p">(</span><span class="n">L_f</span><span class="p">,</span><span class="n">C0</span><span class="p">);</span>
+<span class="k">for</span><span class="w"> </span><span class="nb">j</span><span class="p">=</span><span class="mi">2</span><span class="p">:</span><span class="nb">size</span><span class="p">(</span><span class="n">L_f</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span>
+<span class="w">    </span><span class="n">s2</span><span class="p">=</span><span class="mi">0</span><span class="p">;</span>
+<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="nb">i</span><span class="p">=</span><span class="mi">1</span><span class="p">:</span><span class="nb">size</span><span class="p">(</span><span class="n">L_f</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span>
+<span class="w">        </span><span class="n">s2</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">s2</span><span class="o">+</span><span class="n">L_f</span><span class="p">(</span><span class="nb">i</span><span class="p">)</span><span class="o">*</span><span class="n">C0</span><span class="p">(</span><span class="nb">i</span><span class="p">)</span><span class="o">*</span><span class="n">Sumai</span><span class="p">(</span><span class="nb">i</span><span class="p">,</span><span class="nb">j</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="n">L_f</span><span class="p">);</span>
+<span class="w">    </span><span class="k">end</span>
+<span class="w">    </span><span class="n">C_H</span><span class="p">(</span><span class="nb">j</span><span class="p">)=</span><span class="n">s2</span><span class="p">;</span>
+<span class="k">end</span>
+<span class="n">H1</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">C_H</span><span class="p">;</span>
+<span class="k">end</span>
+</code></pre>
+</div>
+
+<h3 id="554-poly_coeff_q">5.5.4 Poly<em>Coeff</em>Q</h3>
+
+<p>The function <strong>Poly<em>Coeff</em>Q</strong> computes the coefficients of the Polynomial $Q<em>f(s)$ given in the Eq. (17). This polynomial only requires the vector <strong>L</em>f</strong> as input. The following code implement this function the MATLAB programming language:</p>
+
+<h3 id="code-6">Code #6</h3>
+
+<div class="codehilite">
+<pre><span></span><code><span class="k">function</span><span class="w"> </span>Q1<span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nf">Poly_Coeff_Q</span><span class="p">(</span>L_f<span class="p">)</span>
+<span class="n">C_Q</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">[</span><span class="w"> </span><span class="p">];</span>
+<span class="n">C_Q</span><span class="p">(</span><span class="mi">1</span><span class="p">)=</span><span class="mi">1</span><span class="p">;</span>
+<span class="k">for</span><span class="w"> </span><span class="nb">j</span><span class="p">=</span><span class="mi">1</span><span class="p">:</span><span class="nb">size</span><span class="p">(</span><span class="n">L_f</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span>
+<span class="w">    </span><span class="n">C_Q</span><span class="p">(</span><span class="nb">j</span><span class="o">+</span><span class="mi">1</span><span class="p">)=</span><span class="n">Suma</span><span class="p">(</span><span class="nb">j</span><span class="p">,</span><span class="n">L_f</span><span class="p">);</span>
+<span class="k">end</span>
+<span class="n">Q1</span><span class="p">=</span><span class="n">C_Q</span><span class="p">;</span>
+<span class="k">end</span>
+</code></pre>
+</div>
+
+<h2 id="6-analyticfnpke_insertionm">6. AnalyticFNPKE_Insertion.m</h2>
+
+<p>The code <strong>AnalyticFNPKE_Insertion.m</strong> that is provided in the repository, solves the system given in Eq. (1) and Eq. (2), considering a constant reactivity and including the codes that were discussed before. </p>
+
+<blockquote>
+  <p>[!WARNING]
+  The AnalyticFNPKE-Insertion.py code only can be used for cases with constant reactivities. For linear-time reactivities see the AnalyticFNPKE-Ramp.py code.</p>
+</blockquote>
+
+<h3 id="61-verification-of-the-analyticfnpke_insertionm">6.1 Verification of the AnalyticFNPKE_Insertion.m</h3>
+
+<p>A first step in the development of the codes consists of reproducing the integer case for $\alpha=1$. In other words, the fractional model must to reproduce the data obtained with the integer code <a href="https://github.com/Cruz-Lopez-Carlos-Antonio/AnalyticNPKE#6-analyticnpke-insertionpy">AnalyticNPKE-Insertion.py</a>. Therefore we will use the following initial conditions:</p>
+
+<p>$$ n (0) =1  \ \ \ \ C<em>i(0)=\frac{\beta</em>i n<em>0}{\lambda</em>i^\alpha \Lambda^\alpha}, \tag{30} $$</p>
+
+<p>whose justification is provided in the submitter paper. Similarly, the following data will be used:</p>
+
+<table>
+<thead>
+<tr>
+  <th>Nuclear parameter</th>
+  <th>Value  ($\mathrm{s^{-1}}$)</th>
+  <th>Nuclear parameter</th>
+  <th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>$\lambda_1$</td>
+  <td>0.0127</td>
+  <td>$\beta_1$</td>
+  <td>0.000285</td>
+</tr>
+<tr>
+  <td>$\lambda_2$</td>
+  <td>0.0317</td>
+  <td>$\beta_2$</td>
+  <td>0.0015975</td>
+</tr>
+<tr>
+  <td>$\lambda_3$</td>
+  <td>0.115</td>
+  <td>$\beta_3$</td>
+  <td>0.00141</td>
+</tr>
+<tr>
+  <td>$\lambda_4$</td>
+  <td>0.311</td>
+  <td>$\beta_4$</td>
+  <td>0.0030525</td>
+</tr>
+<tr>
+  <td>$\lambda_5$</td>
+  <td>1.40</td>
+  <td>$\beta_5$</td>
+  <td>0.00096</td>
+</tr>
+<tr>
+  <td>$\lambda_6$</td>
+  <td>3.87</td>
+  <td>$\beta_6$</td>
+  <td>0.000195</td>
+</tr>
+</tbody>
+</table>
+
+<p>with $\beta=0.0075$ and $\Lambda=0.0005 \mathrm{s}$. A negative reactivity given by $\rho=-1$ dollar will be used as well as a time of $t=10$ seconds. The following part of the code is considered as the "Input" section. </p>
+
+<h3 id="input">Input:</h3>
+
+<p><details><summary>CLICK HERE to expand the input of the application of the AnalyticFPKE_Insertion.m</summary></p>
+
+<p>
+<div class="codehilite">
+<pre><span></span><code><span class="c">%*******************************************************************</span>
+<span class="c">%************************** Input **********************************</span>
+
+<span class="c">%fractional order</span>
+<span class="n">alpha_f</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
+
+<span class="c">%Vector with the standard decay lambda constants of the precursors</span>
+<span class="n">L</span><span class="p">=[</span><span class="mf">0.0127</span><span class="w"> </span><span class="mf">0.0317</span><span class="w"> </span><span class="mf">0.115</span><span class="w"> </span><span class="mf">0.311</span><span class="w"> </span><span class="mf">1.4</span><span class="w"> </span><span class="mf">3.87</span><span class="p">];</span>
+
+<span class="c">%Betas</span>
+<span class="n">Betas</span><span class="w"> </span><span class="p">=[</span><span class="mf">0.000285</span><span class="p">,</span><span class="mf">0.0015975</span><span class="p">,</span><span class="mf">0.00141</span><span class="p">,</span><span class="mf">0.0030525</span><span class="p">,</span><span class="mf">0.00096</span><span class="p">,</span><span class="mf">0.000195</span><span class="p">];</span>
+
+<span class="c">%reactivity</span>
+<span class="n">rho</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="o">-</span><span class="mf">0.0075</span>
+
+<span class="c">%Lambda_U</span>
+<span class="n">Lambda_U</span><span class="p">=</span><span class="mf">0.0005</span><span class="p">;</span>
+
+<span class="c">% These lines do not need to be modified.</span>
+<span class="c">%Beta total, lambda^alpha, Lambda_U^alpha</span>
+<span class="n">L_f</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">L</span><span class="o">.^</span><span class="n">alpha_f</span><span class="p">;</span>
+<span class="n">LAM_f</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">Lambda_U</span><span class="o">^</span><span class="n">alpha_f</span><span class="p">;</span>
+
+<span class="c">%Initial conditions</span>
+<span class="n">n0</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
+<span class="n">C0</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">(</span><span class="n">n0</span><span class="o">/</span><span class="n">LAM_f</span><span class="p">)</span><span class="o">*</span><span class="n">Betas</span><span class="o">./</span><span class="n">L_f</span>
+
+<span class="c">% The step variable is used for large times, with the purpose of</span>
+<span class="c">% avoiding possible numerical issues with the Mittag-Leffler. </span>
+<span class="c">% For small values (of the order of 10 seconds), Target can be equal</span>
+<span class="c">% to the time step.</span>
+
+<span class="n">Target</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">10</span>
+<span class="nb">step</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">10</span>
+</code></pre>
+</div>
+
+</p>
+
+<p></details></p>
+
+<blockquote>
+  <p>[!WARNING]<br />
+  The input contains two different variables for the time: Target and step. This last is due to numerical issues that the Mittag-Leffler can face for very large times. Therefore, we suggest to consider that these variables have the same value for times lower than 10s. Nevertheless for greater times we suggest to use a time step, which will provide a more efficient implementation.</p>
+</blockquote>
+
+<h3 id="output">Output</h3>
+
+<p>The output for the data provided before is give as follows:</p>
+
+<div class="codehilite">
+<pre><span></span><code><span class="n">Columns</span><span class="w"> </span><span class="s">1</span><span class="w"> </span><span class="s">through</span><span class="w"> </span><span class="s">6</span>
+
+<span class="w">                        </span><span class="mi">10</span><span class="w">         </span><span class="mf">0.236110650788775</span><span class="w">          </span><span class="mf">41.2716360082132</span><span class="w">          </span><span class="mf">82.2178257032565</span><span class="w">          </span><span class="mf">12.8950840417643</span><span class="w">          </span><span class="mf">6.09715513377952</span>
+
+<span class="w">  </span><span class="n">Columns</span><span class="w"> </span><span class="mi">7</span><span class="w"> </span><span class="n">through</span><span class="w"> </span><span class="mi">8</span>
+
+<span class="w">          </span><span class="mf">0.33542103625059</span><span class="w">        </span><span class="mf">0.0240863276763245</span>
+</code></pre>
+</div>
+
+<p>where the first value is the Target time, the second is the neutron density and the rest of the values is the concentration of each group of the delayed neutrons.The data provided before coincides with the one reported by Nahla (2010, 1626) for the neutron density. </p>
+
+<h3 id="62-calculations-for-the-fractional-order-alpha-09">6.2 Calculations for the fractional order $\alpha = 0.9$</h3>
+
+<p>As a second example we will solve the previous case, but considering a fractional order different from 1. Essentially we have the same input that the previous case with the following modification:</p>
+
+<div class="codehilite">
+<pre><span></span><code><span class="c">%************************** Input **********************************</span>
+
+<span class="c">%fractional order</span>
+<span class="n">alpha_f</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mf">0.9</span><span class="p">;</span>
+</code></pre>
+</div>
+
+<p>The corresponding output is the following:</p>
+
+<h3 id="output-2">Output</h3>
+
+<div class="codehilite">
+<pre><span></span><code><span class="n">Columns</span><span class="w"> </span><span class="s">1</span><span class="w"> </span><span class="s">through</span><span class="w"> </span><span class="s">6</span>
+
+<span class="w">                        </span><span class="mi">10</span><span class="w">         </span><span class="mf">0.245804709487946</span><span class="w">          </span><span class="mf">12.2037243895045</span><span class="w">          </span><span class="mf">26.4909471904817</span><span class="w">          </span><span class="mf">4.96488165211542</span><span class="w">          </span><span class="mf">2.88018630226583</span>
+
+<span class="w">  </span><span class="n">Columns</span><span class="w"> </span><span class="mi">7</span><span class="w"> </span><span class="n">through</span><span class="w"> </span><span class="mi">8</span>
+
+<span class="w">         </span><span class="mf">0.175643889648127</span><span class="w">         </span><span class="mf">0.013646526326084</span>
+</code></pre>
+</div>
+
+<p>We can observe that the neutron density obtained with the fractional order is greater than the integer case. Nevertheless, it is possible to observe that the concentration of the precursors of the delayed neutrons is lower in each case. This can be explained by the fractional lambda constants $\lambda_i$, which have a lower value than the integer case, and therefore they are decaying in slower way. </p>
+
+<h2 id="7-analyticfnpke_rampm">7. AnalyticFNPKE_Ramp.m</h2>
+
+<p>As it can be explained in the repository for the <a href="https://github.com/Cruz-Lopez-Carlos-Antonio/AnalyticNPKE#7-analyticnpke-ramppy">integer case</a>, it is possible to use the developed solution for non-constants reactivities, dividing the time in subintervals and updating the initial conditions and the reactivity in each step. This last parameter can be estimated as follows:</p>
+
+<p>$$\bar{\rho}=\frac{\ \rho\left(t<em>n\right)+\rho(t</em>{n-1})}{2}. \tag{31}$$</p>
+
+<p>The code <strong>AnalyticFNPKE<em>ramp.m</strong> implements the last methodology using an iterative process and applying the <strong>AnalyticFNPKE</em>insertion.m</strong> in each step. </p>
+
+<blockquote>
+  <p>[!IMPORTANT]<br />
+  In a strictly sense we are approximating the solution for the non-constant reactivity, which mainly depend on the size of the small step. In fact, the smaller it is the better approximation. We suggest using $h=0.0001$, which guarantees</p>
+  
+  <h3 id="71-verification-of-the-analyticfnpke_rampm">7.1 Verification of the AnalyticFNPKE_Ramp.m</h3>
+</blockquote>
+
+<p>As in the previous case, the first example of application will consists of reproducing the integer's solution assuming that $\alpha=1$. A time step of $h=0.0001 \ \ \mathrm{s}$ will be used with the purpose to have an accuracy of at least seven digits, comparing with the data reported by Hamada (2018, p. 7). The following table contains the values of the decay constants as well as the fractions betas proposed by Nahla (2010, p. 1626):</p>
+
+<table>
+<thead>
+<tr>
+  <th>Nuclear parameter</th>
+  <th>Value  ($\mathrm{s^{-1}}$)</th>
+  <th>Nuclear parameter</th>
+  <th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>$\lambda_1$</td>
+  <td>0.0127</td>
+  <td>$\beta_1$</td>
+  <td>0.000266</td>
+</tr>
+<tr>
+  <td>$\lambda_2$</td>
+  <td>0.0317</td>
+  <td>$\beta_2$</td>
+  <td>0.001491</td>
+</tr>
+<tr>
+  <td>$\lambda_3$</td>
+  <td>0.115</td>
+  <td>$\beta_3$</td>
+  <td>0.001316</td>
+</tr>
+<tr>
+  <td>$\lambda_4$</td>
+  <td>0.311</td>
+  <td>$\beta_4$</td>
+  <td>0.002849</td>
+</tr>
+<tr>
+  <td>$\lambda_5$</td>
+  <td>1.40</td>
+  <td>$\beta_5$</td>
+  <td>0.000896</td>
+</tr>
+<tr>
+  <td>$\lambda_6$</td>
+  <td>3.87</td>
+  <td>$\beta_6$</td>
+  <td>0.000182</td>
+</tr>
+</tbody>
+</table>
+
+<p>The initial conditions are the same that in the previous case, $\beta=0.007$ and $\Lambda= 0.00002 \ \mathrm{s}$ and the reactivity is given by:
+$$\rho(t)=0.1\beta t, \tag{32}$$</p>
+
+<h3 id="input-2">Input</h3>
+
+<p>The following lines show how the input parameters can be introduced to the code.</p>
+
+<p><details><summary>CLICK HERE to expand the input of the application of the AnalyticFPKE_ramp.m</summary></p>
+
+<p>
+<div class="codehilite">
+<pre><span></span><code><span class="c">%*******************************************************************</span>
+<span class="c">%************************** Input **********************************</span>
+
+<span class="c">%fractional order</span>
+<span class="n">alpha_f</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
+
+<span class="c">%Vector with the standard decay lambda constants of the precursors</span>
+<span class="n">L</span><span class="p">=[</span><span class="mf">0.0127</span><span class="w"> </span><span class="mf">0.0317</span><span class="w"> </span><span class="mf">0.115</span><span class="w"> </span><span class="mf">0.311</span><span class="w"> </span><span class="mf">1.4</span><span class="w"> </span><span class="mf">3.87</span><span class="p">];</span>
+
+<span class="c">%Betas</span>
+<span class="n">Betas</span><span class="w"> </span><span class="p">=[</span><span class="mf">0.000285</span><span class="p">,</span><span class="mf">0.0015975</span><span class="p">,</span><span class="mf">0.00141</span><span class="p">,</span><span class="mf">0.0030525</span><span class="p">,</span><span class="mf">0.00096</span><span class="p">,</span><span class="mf">0.000195</span><span class="p">];</span>
+
+<span class="c">%reactivity</span>
+<span class="n">rho</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="o">-</span><span class="mf">0.0075</span>
+
+<span class="c">%Lambda_U</span>
+<span class="n">Lambda_U</span><span class="p">=</span><span class="mf">0.0005</span><span class="p">;</span>
+
+<span class="c">% These lines do not need to be modified.</span>
+<span class="c">%Beta total, lambda^alpha, Lambda_U^alpha</span>
+<span class="n">L_f</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">L</span><span class="o">.^</span><span class="n">alpha_f</span><span class="p">;</span>
+<span class="n">LAM_f</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">Lambda_U</span><span class="o">^</span><span class="n">alpha_f</span><span class="p">;</span>
+
+<span class="c">%Initial conditions</span>
+<span class="n">n0</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
+<span class="n">C0</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">(</span><span class="n">n0</span><span class="o">/</span><span class="n">LAM_f</span><span class="p">)</span><span class="o">*</span><span class="n">Betas</span><span class="o">./</span><span class="n">L_f</span>
+
+<span class="c">% The step variable is used for large times, with the purpose of</span>
+<span class="c">% avoiding possible numerical issues with the Mittag-Leffler. </span>
+<span class="c">% For small values (of the order of 10 seconds), Target can be equal</span>
+<span class="c">% to the time step.</span>
+
+<span class="n">Target</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">10</span>
+<span class="nb">step</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">10</span>
+</code></pre>
+</div>
+
+</p>
+
+<p></details></p>
+
+<h3 id="output-3">Output</h3>
+
+<p>The <strong>AnalyticFNPKE_ramp.m</strong>  generates a single output, which consits of ".xlsx" file with a single sheet in which the first column is the time, the second one is the neutron density and the rest of columns contains the results of the precursors of delayed neutrons. </p>
+
+<h3 id="output-4">Output</h3>
+
+<p>The output file for this example is given in the following <a href="https://github.com/Cruz-Lopez-Carlos-Antonio/AnalyticalFNPKE/blob/main/Output_ramp.xlsx">link</a>.</p>
+
+<blockquote>
+  <p>[!WARNING]<br />
+  The size of the .xlsx is about 10-20 Mb.</p>
+</blockquote>
+
+<blockquote>
+  <p>[!NOTE]<br />
+  The code provided a counter where is showed the progress of the calculation, which appears in the command Window of the MATLAB software.</p>
+</blockquote>
+
+<h3 id="verification">Verification</h3>
+
+<p>The following table contains a comparison of the data computed (extracted from the .xlsx) with the data reported by Hamada (2018, p. 3034). As it can be observed, the results agree with at least seven precision digits. </p>
+
+<table>
+<thead>
+<tr>
+  <th>Time (s)</th>
+  <th>Reference (Hamada, 2018)</th>
+  <th>AnalyticFNPKE_ramp</th>
+  <th>Relative %</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>2.0</td>
+  <td>1.3382000</td>
+  <td>1.3382000</td>
+  <td>1.10394E-08</td>
+</tr>
+<tr>
+  <td>4.0</td>
+  <td>2.2284418</td>
+  <td>2.2284418</td>
+  <td>3.18368E-08</td>
+</tr>
+<tr>
+  <td>6.0</td>
+  <td>5.5820524</td>
+  <td>5.5820522</td>
+  <td>1.14074E-07</td>
+</tr>
+<tr>
+  <td>8.0</td>
+  <td>42.786295</td>
+  <td>42.786294</td>
+  <td>5.16193E-07</td>
+</tr>
+<tr>
+  <td>10.0</td>
+  <td>451163.62</td>
+  <td>451163.61</td>
+  <td>0.009243646</td>
+</tr>
+</tbody>
+</table>
+
+<p>As it can be observed the error remains below of $10^{-3}$ %. </p>
+
+<h3 id="72-calculations-for-the-fractional-order-alpha-09">7.2 Calculations for the fractional order $\alpha = 0.9$</h3>
+
+<p>As a second example, the <strong>AnalyticFNPKE_ramp.m</strong> code will be used to compute the neutron's density considering a fractional order $\alpha =0.5$. The input is very similar to the one used in the past case, but the following line must to be changed:</p>
+
+<div class="codehilite">
+<pre><span></span><code><span class="c">%*******************************************************************</span>
+<span class="c">%************************** Input **********************************</span>
+<span class="c">%fractional order </span>
+<span class="n">alpha_f</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mf">0.9</span><span class="p">;</span>
+</code></pre>
+</div>
+
+</body>
+</html>
